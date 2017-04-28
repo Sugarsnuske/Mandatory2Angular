@@ -9,6 +9,7 @@ import { InternshipDetailsComponent } from './internship-list/internship-details
 
 /* Application-wide when in the app.module */
 import { InternshipService } from './internship-list/internship.service';
+import { InternshipListService } from './internship-list/internship-list.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { InternshipService } from './internship-list/internship.service';
     FormsModule,
     HttpModule
   ],
-  providers: [InternshipService],
+  providers: [InternshipService, InternshipListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
