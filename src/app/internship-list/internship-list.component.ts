@@ -80,8 +80,8 @@ export class InternshipListComponent implements OnInit {
       .subscribe(
         (response : Response) => {
           console.log(response);
-          // let i = this.internships.indexOf(el);
-          // this.internships.splice(i, 1);
+          let i = this.internships.indexOf(el);
+          this.internships.splice(i, 1);
         }
       );
   }

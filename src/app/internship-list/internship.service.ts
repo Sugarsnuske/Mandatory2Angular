@@ -33,6 +33,9 @@ export class InternshipService {
     }
 
     delete(id : string){
+      const headers = new Headers({});
+      //headers.append('Access-Control-Allow-Methods', 'GET');
+      headers.append('Access-Control-Allow-Origin', '*');
       return this.http.delete('http://angular2api2.azurewebsites.net/api/internships/' + id);
     }
 
