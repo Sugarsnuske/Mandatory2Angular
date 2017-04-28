@@ -29,13 +29,16 @@ export class InternshipService {
     //   {headers: headers});
 
     put(intern : any){
-      return this.http.put('http://angular2api2.azurewebsites.net/api/internships/5900933965daf6c0440b2d2556', {} )
+      return this.http.put('http://angular2api2.azurewebsites.net/api/internships/' + intern._id, {} )
     }
 
     delete(id : string){
-      const headers = new Headers({});
-      //headers.append('Access-Control-Allow-Methods', 'GET');
-      headers.append('Access-Control-Allow-Origin', '*');
+      const headers = new Headers({
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Origin': '*', 
+        'Access-Control-Allow-Methods' : 'GET, DELETE, POST, PUT'
+      });
+      console.log(headers);
       return this.http.delete('http://angular2api2.azurewebsites.net/api/internships/' + id);
     }
 

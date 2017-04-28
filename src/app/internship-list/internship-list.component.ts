@@ -41,9 +41,8 @@ export class InternshipListComponent implements OnInit {
     const teacherName = 'Test Testesen';
     this.internshipForm.form.patchValue({
       initials: teacherInitials,
-      name: teacherName
+      name: teacherName,
     });
-
   }
 
   onSubmitInternshipForm(){
@@ -91,7 +90,7 @@ export class InternshipListComponent implements OnInit {
       .subscribe(
         (response : Response) => {
           console.log(response);
-        }
+        }, (error : Response ) => console.log(error)
       )
   }
 
