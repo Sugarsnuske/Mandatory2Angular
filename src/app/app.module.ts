@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { InternshipListComponent } from './internship-list/internship-list.component';
+import { InternshipDetailsComponent } from './internship-list/internship-details/internship-details.component';
+
+/* Application-wide when in the app.module */
+import { InternshipService } from './internship-list/internship.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InternshipListComponent,
+    InternshipDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [InternshipService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
