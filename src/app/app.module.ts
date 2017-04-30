@@ -10,12 +10,14 @@ import { InternshipDetailsComponent } from './internship-list/internship-details
 /* Application-wide when in the app.module */
 import { InternshipService } from './internship-list/internship.service';
 import { InternshipListService } from './internship-list/internship-list.service';
+import { InternshipNewComponent } from './internship-new/internship-new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InternshipListComponent,
-    InternshipDetailsComponent
+    InternshipDetailsComponent,
+    InternshipNewComponent
   ],
   imports: [
     BrowserModule,

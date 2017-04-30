@@ -39,7 +39,7 @@ export class InternshipService {
     //   {headers: headers});
 
     put(intern : any){
-      return this.http.put('http://angular2api2.azurewebsites.net/api/internships/' + intern._id, {} )
+      return this.http.put(this.internshipUrl + intern._id, intern );
     }
 
     delete(id : string){

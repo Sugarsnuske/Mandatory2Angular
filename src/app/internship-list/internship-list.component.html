@@ -2,8 +2,7 @@
 <div class="container">
   <a *ngFor="let el of interns; let i = index">
     <div> {{ el._id }} </div>
-    <!--<div> {{ el.data.initials ? el.data.initials : ''}} </div>
-    <div> {{ el.data.name ? el.data.name : el.data.names }} </div>-->
+    <div *ngIf="el?.data?.initials"> {{ el.data.initials }} </div>
     <span><button (click)="onDelete(el)">Delete</button></span>
     <span><button (click)="onUpdate(el)">Update</button></span>
   </a>
