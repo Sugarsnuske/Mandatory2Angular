@@ -1,5 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, JsonpModule, Headers } from '@angular/http';
+import { 
+  Http, 
+  Response, 
+  JsonpModule, 
+  Headers, 
+  HttpModule, 
+  RequestOptions, 
+  RequestOptionsArgs 
+} from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -18,7 +26,9 @@ export class InternshipService {
     }
 
     post(intern : any){
-      const headers = new Headers({'Content-Type': 'application/json'});
+      const headers = new Headers({
+        'Content-Type': 'application/json'
+      });
       return this.http.post(this.internshipUrl, 
         intern,
         {headers: headers});
@@ -33,13 +43,9 @@ export class InternshipService {
     }
 
     delete(id : string){
-      const headers = new Headers({
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Origin': '*', 
-        'Access-Control-Allow-Methods' : 'GET, DELETE, POST, PUT'
-      });
-      console.log(headers);
-      return this.http.delete('http://angular2api2.azurewebsites.net/api/internships/' + id);
+      return this.http.delete(this.internshipUrl + id);
     }
+
+    
 
 }

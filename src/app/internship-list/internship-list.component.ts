@@ -45,9 +45,11 @@ export class InternshipListComponent implements OnInit {
     this.internshipService.delete(el._id)
       .subscribe(
         (response : Response) => {
-          console.log(response);
+          console.log(response.headers);
+          
           let i = this.internshipListService.internships.indexOf(el);
           this.internshipListService.internships.splice(i, 1);
+          this.interns = this.internshipListService.internships;
         }
       );
   }
@@ -57,7 +59,7 @@ export class InternshipListComponent implements OnInit {
       .subscribe(
         (response : Response) => {
           console.log(response);
-        }, (error : Response ) => console.log(error)
+        }
       )
   }
   

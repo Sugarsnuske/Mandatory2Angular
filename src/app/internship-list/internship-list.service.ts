@@ -6,11 +6,4 @@ import { InternshipService } from './internship.service';
 export class InternshipListService {
     internships : any[];
 
-    constructor() {}
-    
-    getInterns(){
-
-    }
-    
-
 }

@@ -51,7 +51,7 @@ export class InternshipDetailsComponent implements OnInit {
     // this.userInput.initials = this.internshipForm.value.initials;
     // this.internships.push({
       let value = this.internshipForm.value;
-      let intern = {_id : this.generateId(), data : { 
+      let intern = {data : { 
         initials : value.initials,
         name : value.name,
         visitDate : value.visitDate,
@@ -75,9 +75,9 @@ export class InternshipDetailsComponent implements OnInit {
         );
   }
 
-  private generateId() {
-    const id = "5900933965daf6c0440b2d"
-    return id + Math.round(Math.random() * 10000);
-  }
+  // private generateId() {
+  //   const id = "5900933965daf6c0440b2d"
+  //   return id + Math.round(Math.random() * 10000);
+  // }
 
 }
