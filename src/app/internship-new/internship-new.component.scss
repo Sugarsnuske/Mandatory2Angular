@@ -1,0 +1,47 @@
+@import 'internship-new.component.vars.scss';
+
+/*Only for test - remove, when done!*/
+*{
+    margin: 0; /*Reset margin*/
+    padding: 0; /*Reset padding*/
+    /*box-sizing: border-box; /*Changes the original box-model to the border-box model*/
+    /*border: 1px solid black; /*Only for testing. Will be removed/deleted when done*/
+}
+
+
+label{
+    color: $labelColor;
+    margin: 10px 10px 10px 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+form{
+    width: 100%;
+}
+
+
+
+/*Divs - Containers*/
+
+/*Media Queries*/
+@media screen and (max-width: 320px){
+    
+}
+
+@media screen and (min-width: 321px) and (max-width: 420px){
+    
+}
+
+@media screen and (min-width: 421px) and (max-width: 699px){
+   
+}
+
+@media screen and (min-width: 700px) and (max-width: 999px){
+    
+}
+
+@media screen and (min-width: 1000px){
+    
+}
