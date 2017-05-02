@@ -1,5 +1,5 @@
 <div class="container">
-  <div> {{ intern._id }} </div>
+  <div> Internship Report - {{ intern?.data?.name }} </div>
   <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
   <div *ngIf="update" class="update" >
     <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
