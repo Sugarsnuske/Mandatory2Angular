@@ -4,44 +4,64 @@
 *{
     margin: 0; /*Reset margin*/
     padding: 0; /*Reset padding*/
-    /*box-sizing: border-box; /*Changes the original box-model to the border-box model*/
+    box-sizing: border-box; /*Changes the original box-model to the border-box model*/
     /*border: 1px solid black; /*Only for testing. Will be removed/deleted when done*/
 }
 
+button, input, label{
+    margin: 0px 5px; 
+}
+
+button, input{
+    border-radius: 5px;
+    box-shadow: none;
+}
 
 label{
     color: $labelColor;
-    margin: 10px 10px 10px 5px;
-    padding: 10px;
-    font-size: 20px;
-    margin: 10px;
 }
-
-form{
-    width: 100%;
-}
-
-
 
 /*Divs - Containers*/
+.flex-container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 5px 5px;
+    padding: 5px 5px; 
+}
+
+.flex-item{
+    width: 30%;   
+}
 
 /*Media Queries*/
 @media screen and (max-width: 320px){
-    
+    label, input, button, span{
+        font-size: 10px;
+    }    
 }
 
 @media screen and (min-width: 321px) and (max-width: 420px){
-    
+    label, input, button, span{
+        font-size: 12px;
+    }    
 }
 
 @media screen and (min-width: 421px) and (max-width: 699px){
-   
+    label, input, button, span{
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 999px){
-    
+    label, input, button, span{
+        font-size: 18px;
+    }   
 }
 
 @media screen and (min-width: 1000px){
-    
+    label, input, button, span{
+        font-size: 20px;
+    }   
 }
