@@ -23,10 +23,8 @@ export class InternshipNewComponent implements OnInit {
 
   onSuggestTeacher(){
     const teacherInitials = 'Test';
-    const teacherName = 'Test Testesen';
     this.internshipForm.form.patchValue({
-      initials: teacherInitials,
-      name: teacherName,
+      initials: teacherInitials
     });
   }
 
