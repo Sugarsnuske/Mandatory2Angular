@@ -1,16 +1,17 @@
 import { Response } from '@angular/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Output } from '@angular/core';
 import { 
     FormGroup, 
     ReactiveFormsModule, 
     FormBuilder, 
     Validators, 
     FormControl, 
-    NgForm 
+    NgForm
 } from '@angular/forms';
 
 import { InternshipService } from './internship.service';
 import { InternshipListService } from './internship-list.service';
+import { InternshipDetailsComponent } from './internship-details/internship-details.component';
 
 @Component({
   selector: 'app-internship-list',
@@ -19,11 +20,9 @@ import { InternshipListService } from './internship-list.service';
   providers: []
 })
 export class InternshipListComponent implements OnInit {
-  interns : any [];
+  @Output() interns : any [];
   @ViewChild('f') internshipForm : NgForm;
-  userInput : {
-    initials: ''
-  };
+  
 
   constructor(
     private internshipService: InternshipService,
@@ -38,29 +37,6 @@ export class InternshipListComponent implements OnInit {
           console.log(this.interns);  
         }
       );
-  }
-
-  onDelete(el : any) {
-    console.log(el._id);
-    this.internshipService.delete(el._id)
-      .subscribe(
-        (response : Response) => {
-          console.log(response.headers);
-          
-          let i = this.internshipListService.internships.indexOf(el);
-          this.internshipListService.internships.splice(i, 1);
-          this.interns = this.internshipListService.internships;
-        }
-      );
-  }
-
-  onUpdate(el : any) {
-    this.internshipService.put(el)
-      .subscribe(
-        (response : Response) => {
-          console.log(response);
-        }
-      )
   }
   
 }

@@ -1,9 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { async } from '@angular/core/testing';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { Response } from '@angular/http';
 import { NgForm } from '@angular/forms';
 
 import { InternshipService } from './../internship.service';
 import { InternshipListService } from './../internship-list.service';
+import { InternshipListComponent } from './../internship-list.component';
 
 @Component({
   selector: 'app-internship-details',
@@ -13,71 +15,82 @@ import { InternshipListService } from './../internship-list.service';
 })
 export class InternshipDetailsComponent implements OnInit {
   @ViewChild('f') internshipForm : NgForm;
+  @Input() intern : any;
+  update = false;
+  
+  //internship properties
+  initials = "initials"; name = "name" ; visitDate = "visitDate"; 
+  IDOfInternship = "IDOfInternship"; companyName = "companyName"; 
+  companyPerson = "companyPerson"; companyTrends = "companyTrends"; 
+  companyQualification = "companyQualification"; 
+  studentQualification = "studentQualification"; 
+  cooperation = "cooperation"; miscellanous = "miscellanous";
+  
+  internshipToBeUpdated : any = [
+    this.initials,
+    this.name,
+    this.visitDate,
+    this.IDOfInternship,
+    this.companyName,
+    this.companyPerson,
+    this.companyTrends,
+    this.companyQualification,
+    this.studentQualification,
+    this.cooperation,
+    this.miscellanous
+  ];
 
   constructor(
     private internshipService: InternshipService,
-    private internList: InternshipListService) { }
+    private internshipListService: InternshipListService,
+    private internshipListComponent : InternshipListComponent) {}
 
   ngOnInit() {
+    for(let i = 0; i < this.internshipToBeUpdated.length; i++){
+      this.checkUndefined(this.internshipToBeUpdated[i], i);
+    }
   }
 
-  onSuggestTeacher(){
-    const teacherInitials = 'Test';
-    const teacherName = 'Test Testesen';
-    this.internshipForm.form.patchValue({
-      initials: teacherInitials,
-      name: teacherName,
-    });
+  checkUndefined(state : any, index : number) {
+    let check = this.intern;
+    let placeholder = "this.intern.data." + state;
+    if(typeof(check.data) != "undefined"){
+      if((typeof(eval(placeholder))) != "undefined"){
+        this.internshipToBeUpdated[index] = eval(placeholder);
+      }
+    } else {
+      this.internshipToBeUpdated[index] = '';
+    }
   }
 
-  onSuggestAll(){
-    this.internshipForm.form.setValue({
-      initials: 'Test',
-      name: 'Testesen',
-      visitDate: '2013-12-12',
-      IDOfInternship: '123123123',
-      companyName: 'Compname',
-      companyPerson: 'compPerson',
-      companyTrends: 'trends',
-      companyQualification: 'CompQuali',
-      studentQualification: 'studQuali',
-      cooperation: 'coop',
-      miscellaneous: 'misc'
-    });
-    
+  onDelete(el : any) {
+    console.log(el._id);
+    this.internshipService.delete(el._id)
+      .subscribe(
+        (response : Response) => {
+          console.log(response.headers);
+          
+          let i = this.internshipListService.internships.indexOf(el);
+          this.internshipListService.internships.splice(i, 1);
+        }
+      );
   }
 
-  onSubmitInternshipForm(){
-    // this.userInput.initials = this.internshipForm.value.initials;
-    // this.internships.push({
-      let value = this.internshipForm.value;
-      let intern = {data : { 
-        initials : value.initials,
-        name : value.name,
-        visitDate : value.visitDate,
-        IDOfInternship: value.IDOfInternship,
-        companyName : value.companyName,
-        companyPerson : value.companyPerson,
-        companyTrends : value.companyTrends,
-        companyQualification : value.companyQualification,
-        studentQualification : value.studentQualification,
-        cooperation : value.cooperation,
-        miscellaneous : value.miscellaneous
-      } }
-      console.log(intern);
-      this.internshipService.post(intern)
-        .subscribe(
-          (response : Response) => {
-            this.internList.internships.push(response.json());
-            console.log(response);
-            this.internshipForm.reset();
-          }
-        );
+  onUpdate(el : any) {
+    this.internshipService.put(el)
+      .subscribe(
+        (response : Response) => {
+          console.log(response);
+        }
+      )
   }
 
-  // private generateId() {
-  //   const id = "5900933965daf6c0440b2d"
-  //   return id + Math.round(Math.random() * 10000);
-  // }
+  onDetails(){
+    if (this.update){
+      this.update = false
+    } else {
+      this.update = true
+    }   
+  }
 
 }
