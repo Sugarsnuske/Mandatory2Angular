@@ -17,6 +17,14 @@ button, input{
     box-shadow: none;
 }
 
+button {
+    cursor: pointer;
+}
+
+button[type=submit]:disabled{
+    cursor: default;
+}
+
 label{
     color: $labelColor;
 }
