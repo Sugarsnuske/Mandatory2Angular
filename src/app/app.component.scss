@@ -14,6 +14,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 20px 0px;
 }
 
 .jumbotron{
@@ -36,14 +37,10 @@ body{
 .internship-container{
     margin: auto;
     border-radius: 10px; //15
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 0;
 }
 
-// #internship-header{
-//     background-color: $containerBGColor1;
-// }
+ #internship-header{    
+ }
 
 #internship-fillout{
     background-color: $containerBGColor2;
