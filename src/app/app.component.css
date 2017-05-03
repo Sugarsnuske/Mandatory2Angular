@@ -10,13 +10,14 @@
   /*Changes the original box-model to the border-box model*/ }
 
 body {
+  background-color: cornflowerblue;
   background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
 .jumbotron {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px; }
 
 .jumbotron h1 {
@@ -33,14 +34,11 @@ body {
   margin-bottom: 20px;
   padding: 0; }
 
-#internship-header {
-  background-color: rgba(0, 0, 0, 0.8); }
-
 #internship-fillout {
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.6); }
 
 #internship-reports {
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 /*Media Queries*/
 @media screen and (max-width: 320px) {
