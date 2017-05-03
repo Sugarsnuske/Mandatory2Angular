@@ -1,8 +1,10 @@
+<!DOCTYPE html>
+<html>
 <!-- #f="ngForm" makes it possible to get the javascript-Object of the form values -->
   <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
         
         <div class="form-group flex-container">
-          <label class="flex-item" for="initials">Initials</label>
+          <label class="flex-item" for="initials">Initials *</label>
           <input type="text" 
             id="initials" 
             class="form-control flex-item" 
@@ -10,11 +12,14 @@
             name="initials"
             required
             #initials="ngModel">
-            <span class="help-block" *ngIf="!initials.valid && initials.touched">Initials!</span>
+            <div class="help-block" *ngIf="!initials.valid 
+              && initials.touched">
+              <label class="requiredValidator">Please enter your initials!</label>
+            </div>
         </div>
 
       <div class="form-group flex-container">
-        <label class="flex-item" for="name">Student Name</label>
+        <label class="flex-item" for="name">Student Name *</label>
         <input 
           type="text" 
           id="name" 
@@ -22,8 +27,12 @@
           ngModel
           name="name"
           required
+          ng-class="{red: test.something.}"
           #name="ngModel">
-          <span class="help-block" *ngIf="!name.valid && name.touched">Student Name!</span>
+          <div class="help-block" *ngIf="!name.valid 
+            && name.touched">
+            <label class="requiredValidator">Please enter the Student's Name!</label>
+            </div>
       </div>
 
       <div class="flex-container">
@@ -32,7 +41,7 @@
       </div>
 
       <div class="form-group flex-container">
-        <label class="flex-item" for="visitDate">Visit Time & Date</label>
+        <label class="flex-item" for="visitDate">Visit Date *</label>
         <input 
           type="date" 
           id="visitDate" 
@@ -41,11 +50,14 @@
           name="visitDate"
           required
           #visitDate="ngModel">
-          <span class="help-block flex-item" *ngIf="!visitDate.valid && visitDate.touched">visitTime visitDate!</span>
+          <div class="help-block flex-item" *ngIf="!visitDate.valid 
+            && visitDate.touched">
+            <label class="requiredValidator">Please enter the date of the visit!</label>
+            </div>
       </div>
 
       <div class="form-group flex-container">
-        <label class="flex-item" for="IDOfInternship">ID of Internship</label>
+        <label class="flex-item" for="IDOfInternship">ID of Internship *</label>
         <input 
           type="text" 
           id="IDOfInternship" 
@@ -54,11 +66,14 @@
           name="IDOfInternship"
           required
           #IDOfInternship="ngModel">
-          <span class="help-block" *ngIf="!IDOfInternship.valid && IDOfInternship.touched">ID!</span>
+          <div class="help-block" *ngIf="!IDOfInternship.valid 
+            && IDOfInternship.touched">
+            <label class="requiredValidator">Please enter the ID!</label>
+            </div>
       </div>
 
       <div class="form-group flex-container">
-        <label class="flex-item" for="companyName">Company Name</label>
+        <label class="flex-item" for="companyName">Company Name *</label>
         <input 
           type="text" 
           id="companyName" 
@@ -67,7 +82,10 @@
           name="companyName"
           required
           #companyName="ngModel">
-          <span class="help-block" *ngIf="!companyName.valid && companyName.touched" >Company Name!</span>
+          <div class="help-block" *ngIf="!companyName.valid 
+            && companyName.touched" >
+            <label class="requiredValidator">Please enter the Company Name!</label>
+            </div>
       </div>
 
       <div class="form-group flex-container">
@@ -130,9 +148,10 @@
           name="miscellaneous">
       </div>
 
+      <label class="required-star">* Required fields</label>
+
       <div class="flex-container">
         <button class="btn btn-primary flex-item" type="submit" [disabled]="!f.valid">Add Internship Report</button>
       </div>
   </form>
- 
-
+</html> 

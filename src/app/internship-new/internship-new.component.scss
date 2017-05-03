@@ -43,6 +43,23 @@ label{
     width: 30%;   
 }
 
+//Når inputtet både er 'invalid' og 'touched', udfør følgende..
+input.ng-invalid.ng-touched {
+    border-color: red;
+    background: url(../../_img/Error-128.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: white;
+}
+
+//Rød tekst når input er invalid
+.requiredValidator{
+    font-size: 15px;
+    color: red;
+    text-decoration: none;
+}
+
 /*Media Queries*/
 @media screen and (max-width: 320px){
     label, input, button, span{
