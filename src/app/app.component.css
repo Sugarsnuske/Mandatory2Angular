@@ -20,11 +20,14 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px; }
 
-.jumbotron h1 {
+.jumbotron h1, .jumbotron h2 {
   text-align: center;
   margin: 5px 0px;
   padding: 7px 0px;
-  color: #fff; }
+  color: whitesmoke; }
+
+.jumbotron h2 {
+  color: lightgrey; }
 
 /*Divs - Containers*/
 .internship-container {

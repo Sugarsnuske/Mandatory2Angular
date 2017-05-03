@@ -3,8 +3,11 @@
   padding: 0;
   box-sizing: 7px 0px; }
 
+.container {
+  margin: 20px; }
+
 label {
-  color: white; }
+  color: whitesmoke; }
 
 input[type=text] {
   width: 40%; }

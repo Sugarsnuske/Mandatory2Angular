@@ -21,17 +21,16 @@ body{
     border-radius: 10px;
 }
 
-.jumbotron h1{ //h2
+.jumbotron h1, .jumbotron h2{
     text-align: center;
     margin: 5px 0px;
     padding: 7px 0px;
     color: $mainFontColor;
 }
 
-// h2{
-//     color: $internshipHeadingColor;
-//     text-decoration: underline;
-// }
+.jumbotron h2{
+    color: $internshipHeadingColor;
+}
 
 /*Divs - Containers*/
 .internship-container{
