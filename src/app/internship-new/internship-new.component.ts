@@ -30,17 +30,17 @@ export class InternshipNewComponent implements OnInit {
 
   onSuggestAll(){
     this.internshipForm.form.setValue({
-      initials: 'Test',
-      name: 'Testesen',
-      visitDate: '2013-12-12',
-      IDOfInternship: '123123123',
-      companyName: 'Compname',
-      companyPerson: 'compPerson',
-      companyTrends: 'trends',
-      companyQualification: 'CompQuali',
-      studentQualification: 'studQuali',
-      cooperation: 'coop',
-      miscellaneous: 'misc'
+      initials: 'AT',
+      name: 'Mark Zuckerberg',
+      visitDate: '2017-05-03',
+      IDOfInternship: '003473823',
+      companyName: 'Arctic Monkeys',
+      companyPerson: 'Alex Turner',
+      companyTrends: 'Do I Wanna Know?',
+      companyQualification: '5 Stars',
+      studentQualification: 'Should study more music',
+      cooperation: 'Domino',
+      miscellaneous: 'Maybe this field should be bigger'
     });
     
   }
