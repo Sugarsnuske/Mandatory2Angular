@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 7px 0px;
+}
+
+label{
+    color: whitesmoke;
+}
+
+input[type=text]{
+    width: 40%;
+    
+    a:link {
+        text-decoration: none;
+    }
+}
+
+input[type=date]{
+    width: 40%;
+}

@@ -1,0 +1,30 @@
+a {
+  color: whitesmoke; }
+
+a:hover {
+  color: cornflowerblue;
+  text-decoration: none; }
+
+/*Media Queries*/
+@media screen and (max-width: 320px) {
+  .container {
+    width: 280px;
+    font-size: 9px; } }
+@media screen and (min-width: 321px) and (max-width: 420px) {
+  .container {
+    width: 390px;
+    font-size: 10px; } }
+@media screen and (min-width: 421px) and (max-width: 699px) {
+  .container {
+    width: 600px;
+    font-size: 12px; } }
+@media screen and (min-width: 700px) and (max-width: 999px) {
+  .container {
+    width: 800px;
+    font-size: 15px; } }
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 900px;
+    font-size: 19px; } }
+
+/*# sourceMappingURL=internship-list.component.css.map */

@@ -3,6 +3,7 @@
   <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
   <div *ngIf="update" class="update" >
     <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
+
       <div class="form-group">
         <label for="initials">Initials</label>
         <input type="text" 
@@ -11,13 +12,15 @@
           [(ngModel)]="internshipToBeUpdated[0]">
           <!--<span class="help-block" *ngIf="!initials.valid && initials.touched">Initials!</span>-->
       </div>
+
       <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Student Name</label>
         <input type="text"
-        name="name"
-        class="form-control"
+          name="name"
+          class="form-control"
         [(ngModel)]="internshipToBeUpdated[1]">
       </div>
+
       <div class="form-group">
         <label for="visitDate">Visit Date</label>
         <input type="date" 
@@ -25,6 +28,7 @@
           class="form-control"
           [(ngModel)]="internshipToBeUpdated[2]">
       </div>
+
       <div class="form-group">
         <label for="IDOfInterhship">ID of Internship</label>
         <input type="text" 
@@ -32,6 +36,7 @@
         class="form-control"
         [(ngModel)]="internshipToBeUpdated[3]">
       </div>
+
       <div class="form-group">
         <label for="companyName">Company Name</label>
           <input type="text" 
@@ -39,13 +44,15 @@
             class="form-control"
             [(ngModel)]="internshipToBeUpdated[4]">      
       </div>
+
       <div class="form-group">
-        <label for="companyPerson">company Person</label>
+        <label for="companyPerson">Company Contact Person</label>
         <input type="text" 
           name="companyPerson"
           class="form-control"
           [(ngModel)]="internshipToBeUpdated[5]">
       </div>
+
       <div class="form-group">
         <label for="companyQualification">Company Qualification</label>
         <input type="text" 
@@ -53,6 +60,7 @@
           class="form-control"
           [(ngModel)]="internshipToBeUpdated[6]">
       </div>
+
       <div class="form-group">
         <label for="studentQualification">Student Qualification</label>
         <input type="text" 
@@ -60,6 +68,7 @@
           class="form-control"
           [(ngModel)]="internshipToBeUpdated[7]">
       </div>
+
       <div class="form-group">
         <label for="cooperation">Cooperation</label>
         <input type="text" 
@@ -67,6 +76,7 @@
           class="form-control"
           [(ngModel)]="internshipToBeUpdated[8]">
       </div>
+
       <div class="form-group">
         <label for="miscellanous">Miscellanous</label>
         <input type="text" 
@@ -75,8 +85,9 @@
           [(ngModel)]="internshipToBeUpdated[9]">
       </div>
     </form>
+
   </div>
-    <span><button (click)="onDelete(intern)">Delete</button></span>
-    <span><button (click)="onDetails()">Details</button></span>
-    <span *ngIf="update"><button (click)="onUpdate(intern)">Update</button></span>
+    <span><button type="button" class="btn btn-danger" (click)="onDelete(intern)">Delete</button></span>
+    <span><button type="button" class="btn btn-info" (click)="onDetails()">Details</button></span>
+    <span *ngIf="update"><button type="button" class="btn btn-success" (click)="onUpdate(intern)">Update</button></span>
 </div>

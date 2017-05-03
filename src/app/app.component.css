@@ -1,0 +1,83 @@
+/*Imports*/
+/*Variables to use in 'app.component.scss'. Mostly made to exercise with the SASS structure*/
+/*Colors*/
+* {
+  margin: 0;
+  /*Reset margin*/
+  padding: 0;
+  /*Reset padding*/
+  box-sizing: border-box;
+  /*Changes the original box-model to the border-box model*/ }
+
+.jumbotron {
+  background-color: grey;
+  color: #fff;
+  border-radius: 10px; }
+
+h1, h2 {
+  text-align: center;
+  margin: 5px 0px;
+  padding: 7px 0px; }
+
+h1 {
+  color: #fff; }
+
+h2 {
+  color: firebrick;
+  text-decoration: underline; }
+
+/*Divs - Containers*/
+.internship-container {
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0; }
+
+#internship-header {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+#internship-fillout {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#internship-reports {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+/*Media Queries*/
+@media screen and (max-width: 320px) {
+  .internship-container {
+    width: 280px; }
+    .internship-container h1 {
+      font-size: 10px; }
+    .internship-container h2 {
+      font-size: 8px; } }
+@media screen and (min-width: 321px) and (max-width: 420px) {
+  .internship-container {
+    width: 390px; }
+    .internship-container h1 {
+      font-size: 14px; }
+    .internship-container h2 {
+      font-size: 11px; } }
+@media screen and (min-width: 421px) and (max-width: 699px) {
+  .internship-container {
+    width: 600px; }
+    .internship-container h1 {
+      font-size: 18px; }
+    .internship-container h2 {
+      font-size: 14px; } }
+@media screen and (min-width: 700px) and (max-width: 999px) {
+  .internship-container {
+    width: 800px; }
+    .internship-container h1 {
+      font-size: 22px; }
+    .internship-container h2 {
+      font-size: 18px; } }
+@media screen and (min-width: 1000px) {
+  .internship-container {
+    width: 900px; }
+    .internship-container h1 {
+      font-size: 28px; }
+    .internship-container h2 {
+      font-size: 22px; } }
+
+/*# sourceMappingURL=app.component.css.map */

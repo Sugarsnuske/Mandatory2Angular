@@ -7,6 +7,12 @@
     box-sizing: border-box; /*Changes the original box-model to the border-box model*/
 }
 
+.jumbotron{
+    background-color: grey;
+    color: $mainFontColor;
+    border-radius: 10px;
+}
+
 h1, h2{
     text-align: center;
     margin: 5px 0px;
@@ -25,7 +31,7 @@ h2{
 /*Divs - Containers*/
 .internship-container{
     margin: auto;
-    border-radius: 15px;
+    border-radius: 10px; //15
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0;
