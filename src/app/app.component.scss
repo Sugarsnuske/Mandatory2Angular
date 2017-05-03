@@ -7,26 +7,30 @@
     box-sizing: border-box; /*Changes the original box-model to the border-box model*/
 }
 
+body{
+    // background-color: whitesmoke;
+    background-image: url(https://wallpaperscraft.com/image/lines_faded_form_background_46920_2560x1600.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .jumbotron{
-    background-color: grey;
-    color: $mainFontColor;
+    background-color: $containerBGColor1;
     border-radius: 10px;
 }
 
-h1, h2{
+.jumbotron h1{ //h2
     text-align: center;
     margin: 5px 0px;
     padding: 7px 0px;
-}
-
-h1{
     color: $mainFontColor;
 }
 
-h2{
-    color: $internshipHeadingColor;
-    text-decoration: underline;
-}
+// h2{
+//     color: $internshipHeadingColor;
+//     text-decoration: underline;
+// }
 
 /*Divs - Containers*/
 .internship-container{

@@ -9,22 +9,21 @@
   box-sizing: border-box;
   /*Changes the original box-model to the border-box model*/ }
 
+body {
+  background-image: url(https://wallpaperscraft.com/image/lines_faded_form_background_46920_2560x1600.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
 .jumbotron {
-  background-color: grey;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px; }
 
-h1, h2 {
+.jumbotron h1 {
   text-align: center;
   margin: 5px 0px;
-  padding: 7px 0px; }
-
-h1 {
+  padding: 7px 0px;
   color: #fff; }
-
-h2 {
-  color: firebrick;
-  text-decoration: underline; }
 
 /*Divs - Containers*/
 .internship-container {
