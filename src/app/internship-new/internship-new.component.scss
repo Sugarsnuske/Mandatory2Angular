@@ -12,6 +12,12 @@ form{
     margin: 20px;
 }
 
+h2{
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
 button, input, label{
     margin: 0px 5px; 
 }
@@ -81,6 +87,10 @@ input.ng-invalid.ng-touched{
         font-size: 10px;
     }
 
+    h2{
+        font-size: 18px;
+    }
+
     .help-block{
         padding-left: 101px; 
 
@@ -97,6 +107,10 @@ input.ng-invalid.ng-touched{
 @media screen and (min-width: 321px) and (max-width: 420px){
     label, input, button, span{
         font-size: 12px;
+    }
+
+    h2{
+        font-size: 19px;
     }
 
     .help-block{
@@ -117,6 +131,10 @@ input.ng-invalid.ng-touched{
         font-size: 15px;
     }
 
+    h2{
+        font-size: 21px;
+    }
+
     .help-block{
         padding-left: 261px; 
 
@@ -135,6 +153,10 @@ input.ng-invalid.ng-touched{
         font-size: 18px;
     }
 
+    h2{
+        font-size: 24px;
+    }
+
     .help-block{
         padding-left: 360px; 
 
@@ -151,6 +173,10 @@ input.ng-invalid.ng-touched{
 @media screen and (min-width: 1000px){
     label, input, button, span{
         font-size: 20px;
+    }
+
+    h2{
+        font-size: 28px;
     }
 
     .help-block{

@@ -1,6 +1,5 @@
 /*Variables to use in 'internship-new.component.scss'. Mostly made to exercise with the SASS structure*/
 /*Colors*/
-/*Only for test - remove, when done!*/
 * {
   margin: 0;
   /*Reset margin*/
@@ -13,6 +12,11 @@
 form {
   padding: 20px;
   margin: 20px; }
+
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 4%; }
 
 button, input, label {
   margin: 0px 5px; }
@@ -40,36 +44,99 @@ label {
   padding: 5px 5px; }
 
 .flex-item {
-  width: 30%; }
+  width: 35%; }
 
 input.ng-invalid.ng-touched {
-  border-color: red;
+  border-color: #d72828;
   background: url(../../_img/Error-128.png);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: right;
-  background-color: white; }
+  background-color: white;
+  background-position-x: 250px; }
 
 .requiredValidator {
-  font-size: 15px;
-  color: red;
+  color: #d72828;
   text-decoration: none; }
+
+.help-block {
+  padding-left: 410px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+  font-size: 20px; }
+  .help-block label {
+    font-size: 15px; }
 
 /*Media Queries*/
 @media screen and (max-width: 320px) {
   label, input, button, span {
-    font-size: 10px; } }
+    font-size: 10px; }
+
+  h2 {
+    font-size: 18px; }
+
+  .help-block {
+    padding-left: 101px; }
+    .help-block label {
+      font-size: 7px; }
+
+  input.ng-invalid.ng-touched {
+    background-position-x: 35px; } }
 @media screen and (min-width: 321px) and (max-width: 420px) {
   label, input, button, span {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  h2 {
+    font-size: 19px; }
+
+  .help-block {
+    padding-left: 155px; }
+    .help-block label {
+      font-size: 9px; }
+
+  input.ng-invalid.ng-touched {
+    background-position-x: 73px; } }
 @media screen and (min-width: 421px) and (max-width: 699px) {
   label, input, button, span {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  h2 {
+    font-size: 21px; }
+
+  .help-block {
+    padding-left: 261px; }
+    .help-block label {
+      font-size: 12px; }
+
+  input.ng-invalid.ng-touched {
+    background-position-x: 145px; } }
 @media screen and (min-width: 700px) and (max-width: 999px) {
   label, input, button, span {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  h2 {
+    font-size: 24px; }
+
+  .help-block {
+    padding-left: 360px; }
+    .help-block label {
+      font-size: 14px; }
+
+  input.ng-invalid.ng-touched {
+    background-position-x: 215px; } }
 @media screen and (min-width: 1000px) {
   label, input, button, span {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  h2 {
+    font-size: 28px; }
+
+  .help-block {
+    padding-left: 410px; }
+    .help-block label {
+      font-size: 15px; }
+
+  input.ng-invalid.ng-touched {
+    background-position-x: 250px; } }
 
 /*# sourceMappingURL=internship-new.component.css.map */
