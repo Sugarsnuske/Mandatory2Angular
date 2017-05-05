@@ -63,6 +63,6 @@
 
     </div>
     <span><button type="button" class="btn btn-danger" (click)="onDelete(intern)">Delete</button></span>
-    <span><button type="button" class="btn btn-info" (click)="onDetails()">Details</button></span>
+    <span><button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button></span>
     <span *ngIf="update"><button type="button" class="btn btn-success" (click)="onUpdate()">Update</button></span>
 </div>

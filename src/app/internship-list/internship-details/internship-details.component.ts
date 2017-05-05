@@ -17,6 +17,7 @@ export class InternshipDetailsComponent implements OnInit {
   @ViewChild('f') internshipForm : NgForm;
   @Input() intern : any;
   update = false;
+  details = "Details";
   
   //internship properties
   initials = "initials"; name = "name" ; visitDate = "visitDate"; 
@@ -101,8 +102,10 @@ export class InternshipDetailsComponent implements OnInit {
   onDetails(){
     if (this.update){
       this.update = false
+      this.details = "Details"
     } else {
       this.update = true
+      this.details = "Close"
     }   
   }
 
