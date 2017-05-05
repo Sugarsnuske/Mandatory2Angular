@@ -1,7 +1,10 @@
 <div class="container">
-  <h2>All Internship Reports</h2>
-  <a *ngFor="let el of interns; let i = index">
-    <app-internship-details [intern]="el"></app-internship-details>
-    <hr> <!--Seperator-->
-  </a>
+    <h2>All Internship Reports</h2>
+    <div class="test1">
+        <a *ngFor="let el of interns; let i = index">
+            <app-internship-details [intern]="el"></app-internship-details>
+            <hr>
+            <!--Seperator-->
+        </a>
+    </div>
 </div>
