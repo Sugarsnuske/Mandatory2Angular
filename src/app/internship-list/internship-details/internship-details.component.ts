@@ -89,7 +89,7 @@ export class InternshipDetailsComponent implements OnInit {
     this.intern.data.companyQualification = this.internshipToBeUpdated[7];
     this.intern.data.studentQualification = this.internshipToBeUpdated[8];
     this.intern.data.cooperation = this.internshipToBeUpdated[9];
-    this.intern.data.miscellanous = this.internshipToBeUpdated[10];
+    this.intern.data.miscellaneous = this.internshipToBeUpdated[10];
 
     this.internshipService.put(this.intern)
       .subscribe(
