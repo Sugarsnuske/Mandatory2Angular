@@ -97,6 +97,7 @@ export class InternshipDetailsComponent implements OnInit {
           console.log(response);
           this.update = false;
           this.isUpdated = true;
+          this.details = "Details";
           setTimeout( () => {
             this.isUpdated = false;
           }, 4000 );
