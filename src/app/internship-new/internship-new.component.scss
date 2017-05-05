@@ -81,6 +81,47 @@ input.ng-invalid.ng-touched{
     }
 }
 
+//Small transformations for "Suggest Teacher" and "Suggest All" buttons
+.btn-info:active{
+    transform: translateY(4px);
+}
+
+.btn-default:active{
+    transform: translateX(4px);
+}
+
+//Transition and transformation for "Internship Repport" button
+.btn-primary span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-primary span:after{
+    content: '\00bb'; //double arrows
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;  
+}
+
+.btn-primary:hover span{
+    padding-right: 25px;
+}
+
+.btn-primary:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.btn-primary:active{
+    transform: translateX(4px);
+}
+
+
+
 /*Media Queries*/
 @media screen and (max-width: 320px){
     label, input, button, span{
