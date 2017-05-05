@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container container-transitions">
     <h2>All Internship Reports</h2>
-    <div class="test1">
+    <div>
         <a *ngFor="let el of interns; let i = index">
             <app-internship-details [intern]="el"></app-internship-details>
             <hr>

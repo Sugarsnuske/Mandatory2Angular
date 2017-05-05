@@ -12,13 +12,13 @@ h2 {
     text-align: center;
 }
 
-.test1 {
+.container-transitions {
     transition: background 1s, color 1s;
+    border-radius: 1em;
 }
 
-.test1:hover {
-    color: whitesmoke;
-    background: #4a89ca;
+.container-transitions:hover {
+    background: grey;
 }
 
 
