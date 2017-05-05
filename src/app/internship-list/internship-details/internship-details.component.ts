@@ -76,11 +76,24 @@ export class InternshipDetailsComponent implements OnInit {
       );
   }
 
-  onUpdate(el : any) {
-    this.internshipService.put(el)
+  onUpdate() {
+    this.intern.data.initials = this.internshipToBeUpdated[0];
+    this.intern.data.name = this.internshipToBeUpdated[1];
+    this.intern.data.visitDate = this.internshipToBeUpdated[2];
+    this.intern.data.IDOfInternship = this.internshipToBeUpdated[3];
+    this.intern.data.companyName = this.internshipToBeUpdated[4];
+    this.intern.data.companyPerson = this.internshipToBeUpdated[5];
+    this.intern.data.companyTrends = this.internshipToBeUpdated[6];
+    this.intern.data.companyQualification = this.internshipToBeUpdated[7];
+    this.intern.data.studentQualification = this.internshipToBeUpdated[8];
+    this.intern.data.cooperation = this.internshipToBeUpdated[9];
+    this.intern.data.miscellanous = this.internshipToBeUpdated[10];
+
+    this.internshipService.put(this.intern)
       .subscribe(
         (response : Response) => {
           console.log(response);
+          // this.update = false;
         }
       )
   }
