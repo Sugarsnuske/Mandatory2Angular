@@ -49,7 +49,7 @@ export class InternshipNewComponent implements OnInit {
     // this.userInput.initials = this.internshipForm.value.initials;
     // this.internships.push({
       let value = this.internshipForm.value;
-      let intern = {data : { 
+      let intern = { data : { 
         initials : value.initials,
         name : value.name,
         visitDate : value.visitDate,

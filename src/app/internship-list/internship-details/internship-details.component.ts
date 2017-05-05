@@ -24,7 +24,7 @@ export class InternshipDetailsComponent implements OnInit {
   companyPerson = "companyPerson"; companyTrends = "companyTrends"; 
   companyQualification = "companyQualification"; 
   studentQualification = "studentQualification"; 
-  cooperation = "cooperation"; miscellanous = "miscellanous";
+  cooperation = "cooperation"; miscellaneous = "miscellaneous";
   
   internshipToBeUpdated : any = [
     this.initials,
@@ -37,7 +37,7 @@ export class InternshipDetailsComponent implements OnInit {
     this.companyQualification,
     this.studentQualification,
     this.cooperation,
-    this.miscellanous
+    this.miscellaneous
   ];
 
   constructor(
