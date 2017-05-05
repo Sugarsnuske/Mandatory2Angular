@@ -1,6 +1,7 @@
 <div class="container">
     <div class="headline-animation"> Internship Report - {{ intern?.data?.name }} </div>
     <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
+    <div *ngIf="isUpdated">Is now updated</div>
     <div *ngIf="update" class="update">
         <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
 

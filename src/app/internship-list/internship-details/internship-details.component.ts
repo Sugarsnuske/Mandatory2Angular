@@ -17,6 +17,7 @@ export class InternshipDetailsComponent implements OnInit {
   @ViewChild('f') internshipForm : NgForm;
   @Input() intern : any;
   update = false;
+  isUpdated = false;
   details = "Details";
   
   //internship properties
@@ -94,7 +95,11 @@ export class InternshipDetailsComponent implements OnInit {
       .subscribe(
         (response : Response) => {
           console.log(response);
-          // this.update = false;
+          this.update = false;
+          this.isUpdated = true;
+          setTimeout( () => {
+            this.isUpdated = false;
+          }, 4000 );
         }
       )
   }
