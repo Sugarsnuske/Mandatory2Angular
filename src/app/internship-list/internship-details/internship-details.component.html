@@ -1,6 +1,9 @@
 <div class="container">
     <div class="headline-animation"> Internship Report - {{ intern?.data?.name }} </div>
     <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
+    <span><button type="button" class="btn btn-danger" (click)="onDelete(intern)">Delete</button></span>
+    <span><button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button></span>
+    <span *ngIf="update"><button type="button" class="btn btn-success" (click)="onUpdate()">Update</button></span>
     <div *ngIf="isUpdated">Is now updated</div>
     <div *ngIf="update" class="update">
         <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
@@ -63,7 +66,4 @@
         </form>
 
     </div>
-    <span><button type="button" class="btn btn-danger" (click)="onDelete(intern)">Delete</button></span>
-    <span><button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button></span>
-    <span *ngIf="update"><button type="button" class="btn btn-success" (click)="onUpdate()">Update</button></span>
 </div>
