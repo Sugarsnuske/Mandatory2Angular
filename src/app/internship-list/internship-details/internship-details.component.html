@@ -1,69 +1,142 @@
 <div class="container">
     <div class="headline-animation"> Internship Report - {{ intern?.data?.name }} </div>
     <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
-    <span><button type="button" class="btn btn-danger" (click)="onDelete(intern)">Delete</button></span>
+    <span><button type="button" class="btn btn-danger" data-toggle="modal" 
+        data-target="#deleteModal" (click)="onDelete(intern)">Delete
+    </button></span>
     <span><button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button></span>
-    <span *ngIf="update"><button type="button" class="btn btn-success" (click)="onUpdate()">Update</button></span>
+
     <div *ngIf="isUpdated">Is now updated</div>
     <div *ngIf="update" class="update">
-        <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
 
-            <div class="form-group">
-                <label for="initials">Initials</label>
-                <input type="text" name="initials" class="form-control" [(ngModel)]="internshipToBeUpdated[0]">
-                <!--<span class="help-block" *ngIf="!initials.valid && initials.touched">Initials!</span>-->
+        <!-- String interpolation -->
+        <div>
+            <label for="initials">Initials</label>
+                <p>{{ intern?.data?.initials }}</p>
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <p>{{ intern?.data?.name }}</p>
+        </div>
+        <div>
+            <!-- Date pipe -->
+            <label for="visitDate">Visit Date</label>
+            <p>{{ intern?.data?.visitDate | date:'EEEE d MMMM y'}}</p>
+        </div>
+        <div>
+            <label for="companyName">Company Name</label>
+            <p>{{ intern?.data?.companyName }}</p>
+        </div>
+        <div>
+            <label for="Company Person">Company Person</label>
+            <p>{{ intern?.data?.companyPerson }}</p>
+        </div>
+
+
+        <!-- Trigger the editModal with a button -->
+    <span><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editModal" (click)="onEdit()">Edit</button></span>
+ 
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+            <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
+
+                <div class="form-group">
+                    <label for="initials">Initials</label>
+                    <input type="text" name="initials" class="form-control" [(ngModel)]="internshipToBeUpdated[0]">
+                    <!--<span class="help-block" *ngIf="!initials.valid && initials.touched">Initials!</span>-->
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" name="name" class="form-control" [(ngModel)]="internshipToBeUpdated[1]">
+                </div>
+
+                <div class="form-group">
+                    <label for="visitDate">Visit Date</label>
+                    <input type="date" name="visitDate" class="form-control" [(ngModel)]="internshipToBeUpdated[2]">
+                </div>
+
+                <div class="form-group">
+                    <label for="IDOfInterhship">ID of Internship</label>
+                    <input type="text" name="IDOfInternship" class="form-control" [(ngModel)]="internshipToBeUpdated[3]">
+                </div>
+
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" name="companyName" class="form-control" [(ngModel)]="internshipToBeUpdated[4]">
+                </div>
+
+                <div class="form-group">
+                    <label for="companyPerson">Company Contact Person</label>
+                    <input type="text" name="companyPerson" class="form-control" [(ngModel)]="internshipToBeUpdated[5]">
+                </div>
+
+                <div class="form-group">
+                    <label for="companyTrends">Company Trends</label>
+                    <input type="text" name="companyTrends" class="form-control" [(ngModel)]="internshipToBeUpdated[6]">
+                </div>
+
+                <div class="form-group">
+                    <label for="companyQualification">Company Qualification</label>
+                    <input type="text" name="companyQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[7]">
+                </div>
+
+                <div class="form-group">
+                    <label for="studentQualification">Student Qualification</label>
+                    <input type="text" name="studentQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[8]">
+                </div>
+
+                <div class="form-group">
+                    <label for="cooperation">Cooperation</label>
+                    <input type="text" name="cooperation" class="form-control" [(ngModel)]="internshipToBeUpdated[9]">
+                </div>
+
+                <div class="form-group">
+                    <label for="miscellaneous">Miscellaneous</label>
+                    <textarea rows="5" name="miscellaneous" class="form-control" [(ngModel)]="internshipToBeUpdated[10]"></textarea>
+                </div>
+            </form>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <span><button type="button" class="btn btn-success" data-dismiss="modal" (click)="onUpdate()">Update</button></span>
             </div>
-
-            <div class="form-group">
-                <label for="name">Student Name</label>
-                <input type="text" name="name" class="form-control" [(ngModel)]="internshipToBeUpdated[1]">
-            </div>
-
-            <div class="form-group">
-                <label for="visitDate">Visit Date</label>
-                <input type="date" name="visitDate" class="form-control" [(ngModel)]="internshipToBeUpdated[2]">
-            </div>
-
-            <div class="form-group">
-                <label for="IDOfInterhship">ID of Internship</label>
-                <input type="text" name="IDOfInternship" class="form-control" [(ngModel)]="internshipToBeUpdated[3]">
-            </div>
-
-            <div class="form-group">
-                <label for="companyName">Company Name</label>
-                <input type="text" name="companyName" class="form-control" [(ngModel)]="internshipToBeUpdated[4]">
-            </div>
-
-            <div class="form-group">
-                <label for="companyPerson">Company Contact Person</label>
-                <input type="text" name="companyPerson" class="form-control" [(ngModel)]="internshipToBeUpdated[5]">
-            </div>
-
-            <div class="form-group">
-                <label for="companyTrends">Company Trends</label>
-                <input type="text" name="companyTrends" class="form-control" [(ngModel)]="internshipToBeUpdated[6]">
-            </div>
-
-            <div class="form-group">
-                <label for="companyQualification">Company Qualification</label>
-                <input type="text" name="companyQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[7]">
-            </div>
-
-            <div class="form-group">
-                <label for="studentQualification">Student Qualification</label>
-                <input type="text" name="studentQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[8]">
-            </div>
-
-            <div class="form-group">
-                <label for="cooperation">Cooperation</label>
-                <input type="text" name="cooperation" class="form-control" [(ngModel)]="internshipToBeUpdated[9]">
-            </div>
-
-            <div class="form-group">
-                <label for="miscellaneous">Miscellaneous</label>
-                <textarea rows="5" name="miscellaneous" class="form-control" [(ngModel)]="internshipToBeUpdated[10]"></textarea>
-            </div>
-        </form>
-
+        </div>
     </div>
+</div>
+</div>
+
+    
+      <!-- Delete Modal -->
+  <!--<div class="modal fade" id="deleteModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Warning</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure to delete this?</p>
+          <input type="text" [ngModel]="intern?._id" class="formControl">
+          <p>{{ intern?.data?.name }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          <span><button type="button" class="btn btn-default" data-dissmiss="modal" 
+            (click)="onDeleteInModal()">Yes, I'm sure</button></span>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
 </div>

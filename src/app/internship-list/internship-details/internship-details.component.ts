@@ -2,6 +2,7 @@ import { async } from '@angular/core/testing';
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { Response } from '@angular/http';
 import { NgForm } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
 
 import { InternshipService } from './../internship.service';
 import { InternshipListService } from './../internship-list.service';
@@ -18,9 +19,11 @@ export class InternshipDetailsComponent implements OnInit {
   @Input() intern : any;
   update = false;
   isUpdated = false;
+  deleteIntern: Observable<any>;
   details = "Details";
   
   //internship properties
+  id;
   initials = "initials"; name = "name" ; visitDate = "visitDate"; 
   IDOfInternship = "IDOfInternship"; companyName = "companyName"; 
   companyPerson = "companyPerson"; companyTrends = "companyTrends"; 
@@ -48,6 +51,7 @@ export class InternshipDetailsComponent implements OnInit {
     private internshipListComponent : InternshipListComponent) {}
 
   ngOnInit() {
+    this.id = this.intern._id;
     for(let i = 0; i < this.internshipToBeUpdated.length; i++){
       this.checkUndefined(this.internshipToBeUpdated[i], i);
     }
@@ -66,8 +70,9 @@ export class InternshipDetailsComponent implements OnInit {
   }
 
   onDelete(el : any) {
-    console.log(el._id);
-    this.internshipService.delete(el._id)
+    console.log(el);
+  
+      this.internshipService.delete(el._id)
       .subscribe(
         (response : Response) => {
           console.log(response.headers);
@@ -78,7 +83,11 @@ export class InternshipDetailsComponent implements OnInit {
       );
   }
 
-  onUpdate() {
+  onDeleteInModal(){
+    console.log(this.intern);
+  }
+
+  onEdit(){
     this.intern.data.initials = this.internshipToBeUpdated[0];
     this.intern.data.name = this.internshipToBeUpdated[1];
     this.intern.data.visitDate = this.internshipToBeUpdated[2];
@@ -90,6 +99,10 @@ export class InternshipDetailsComponent implements OnInit {
     this.intern.data.studentQualification = this.internshipToBeUpdated[8];
     this.intern.data.cooperation = this.internshipToBeUpdated[9];
     this.intern.data.miscellaneous = this.internshipToBeUpdated[10];
+  }
+
+  onUpdate() {
+    this.onEdit();
 
     this.internshipService.put(this.intern)
       .subscribe(
