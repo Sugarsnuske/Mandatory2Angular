@@ -13,12 +13,14 @@ import { InternshipListService } from './internship-list/internship-list.service
 import { InternshipNewComponent } from './internship-new/internship-new.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 /* Routings */
 const appRoutes: Routes = [
    { path: '', component: HomeComponent},
    { path: 'internship-list', component: InternshipListComponent },
-   { path: 'internship-new', component: InternshipNewComponent} 
+   { path: 'internship-new', component: InternshipNewComponent},
+   { path: '**', component: PageNotFoundComponent } 
 ];
 
 
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     InternshipDetailsComponent,
     InternshipNewComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
