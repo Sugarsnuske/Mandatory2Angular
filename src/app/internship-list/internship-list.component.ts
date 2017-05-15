@@ -29,14 +29,15 @@ export class InternshipListComponent implements OnInit {
     private internshipListService: InternshipListService) { }
 
   ngOnInit() {
-    this.internshipService.get()
-      .subscribe(
-        (interns: any[]) => {
-          this.internshipListService.internships = interns
-          this.interns = this.internshipListService.internships
-          console.log(this.interns);  
-        }
-      );
+    this.interns = this.internshipListService.internships
+    // this.internshipService.get()
+    //   .subscribe(
+    //     (interns: any[]) => {
+    //       this.internshipListService.internships = interns
+    //       this.interns = this.internshipListService.internships    
+    //       console.log(this.interns);  
+    //     }
+    //   );
   }
   
 }
