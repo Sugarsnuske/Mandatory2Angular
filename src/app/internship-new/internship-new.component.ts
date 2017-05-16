@@ -40,7 +40,7 @@ export class InternshipNewComponent implements OnInit {
       companyQualification: '5 Stars',
       studentQualification: 'Should study more music',
       cooperation: 'Domino',
-      miscellaneous: 'Maybe this field should be bigger'
+      miscellaneous: 'Bla bla bla blabla'
     });
     
   }
