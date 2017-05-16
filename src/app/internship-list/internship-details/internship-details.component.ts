@@ -79,7 +79,7 @@ export class InternshipDetailsComponent implements OnInit {
           
           let i = this.internshipListService.internships.indexOf(el);
           this.internshipListService.internships.splice(i, 1);
-        }
+        },(error: Error) => console.log(error)
       );
   }
 
@@ -120,11 +120,12 @@ export class InternshipDetailsComponent implements OnInit {
 
   onDetails(){
     if (this.update){
-      this.update = false
-      this.details = "Details"
+      this.update = false;
+      this.details = "Details";
     } else {
-      this.update = true
-      this.details = "Close"
+      this.update = true;
+      this.details = "Close";
+      this.internshipListComponent.checkOpenDetails(this);
     }   
   }
 

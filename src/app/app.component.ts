@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
         (interns: any[]) => {
           this.internshipListService.internships = interns
           console.log(this.internshipListService.internships);
-        }
+        }, (error: Error) => console.log(error)
       );
     }
 

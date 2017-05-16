@@ -33,10 +33,6 @@ export class InternshipService {
         intern,
         {headers: headers});
     }
-    
-    // return this.http.post('https://udemy-ng-http.firebaseio.com/data.json',
-    //   servers,
-    //   {headers: headers});
 
     put(intern : any){
       return this.http.put(this.internshipUrl + intern._id, intern );

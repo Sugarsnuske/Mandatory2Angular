@@ -39,5 +39,17 @@ export class InternshipListComponent implements OnInit {
     //     }
     //   );
   }
+
+  detailsOpen : any;
+
+    checkOpenDetails(el: any) {
+        if (this.detailsOpen != el && this.detailsOpen != undefined){
+          this.detailsOpen.update = false;
+          this.detailsOpen.details = "Details"
+          this.detailsOpen = el;
+        } else {
+            this.detailsOpen = el;
+        }
+    }
   
 }
