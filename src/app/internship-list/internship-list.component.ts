@@ -22,7 +22,8 @@ import { InternshipDetailsComponent } from './internship-details/internship-deta
 export class InternshipListComponent implements OnInit {
   @Output() interns : any [];
   @ViewChild('f') internshipForm : NgForm;
-  
+  detailsOpen : any;
+  internToDelete: any;
 
   constructor(
     private internshipService: InternshipService,
@@ -40,16 +41,30 @@ export class InternshipListComponent implements OnInit {
     //   );
   }
 
-  detailsOpen : any;
-
-    checkOpenDetails(el: any) {
-        if (this.detailsOpen != el && this.detailsOpen != undefined){
+  /* Check if any listItem is open and close if other one is open */
+  checkOpen(el: any, state: string) {
+    switch (state) {
+      case "details": 
+        if (this.detailsOpen != el && this.detailsOpen != undefined){          
           this.detailsOpen.update = false;
           this.detailsOpen.details = "Details"
           this.detailsOpen = el;
         } else {
-            this.detailsOpen = el;
+          this.detailsOpen = el;
         }
+        break;
+      case "delete":
+        if(this.internToDelete != el && this.internToDelete != undefined){
+          this.internToDelete.deletePressed = false;
+          this.internToDelete = el;
+        } else {
+          this.internToDelete = el;
+        }
+        break;
+      default:
+        break;
     }
+      
+  }
   
 }

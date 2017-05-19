@@ -19,7 +19,7 @@ export class InternshipDetailsComponent implements OnInit {
   @Input() intern : any;
   update = false;
   isUpdated = false;
-  deleteIntern: Observable<any>;
+  deletePressed: boolean;
   details = "Details";
   
   //internship properties
@@ -57,6 +57,7 @@ export class InternshipDetailsComponent implements OnInit {
     }
   }
 
+  /* Check if   */
   checkUndefined(state : any, index : number) {
     let check = this.intern;
     let placeholder = "this.intern.data." + state;
@@ -69,22 +70,15 @@ export class InternshipDetailsComponent implements OnInit {
     }
   }
 
-  onDelete(el : any) {
-    console.log(el);
-  
-      this.internshipService.delete(el._id)
-      .subscribe(
-        (response : Response) => {
-          console.log(response.headers);
-          
-          let i = this.internshipListService.internships.indexOf(el);
-          this.internshipListService.internships.splice(i, 1);
-        },(error: Error) => console.log(error)
-      );
-  }
-
-  onDeleteInModal(){
-    console.log(this.intern);
+  onDelete(){
+    if (this.deletePressed){
+      this.deletePressed = false;
+    } else {
+      this.deletePressed = true;
+      this.internshipListComponent.checkOpen(this, "delete");
+    } 
+    
+    console.log(this.deletePressed);
   }
 
   onEdit(){
@@ -125,7 +119,7 @@ export class InternshipDetailsComponent implements OnInit {
     } else {
       this.update = true;
       this.details = "Close";
-      this.internshipListComponent.checkOpenDetails(this);
+      this.internshipListComponent.checkOpen(this, "details");
     }   
   }
 

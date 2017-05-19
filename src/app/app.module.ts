@@ -14,6 +14,7 @@ import { InternshipNewComponent } from './internship-new/internship-new.componen
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { InternshipDeleteComponent } from './internship-list/internship-details/internship-delete/internship-delete.component';
 
 /* Routings */
 const appRoutes: Routes = [
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     InternshipNewComponent,
     HeaderComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    InternshipDeleteComponent
   ],
   imports: [
     BrowserModule,
