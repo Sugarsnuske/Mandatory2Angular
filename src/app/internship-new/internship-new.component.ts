@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Response } from '@angular/http';
-import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { InternshipService } from '../internship-list/internship.service';
 import { InternshipListService } from '../internship-list/internship-list.service';
@@ -12,25 +12,40 @@ import { InternshipListService } from '../internship-list/internship-list.servic
   styleUrls: ['./internship-new.component.scss']
 })
 export class InternshipNewComponent implements OnInit {
-  @ViewChild('f') internshipForm : NgForm;
+  // @ViewChild('f') internshipForm : NgForm;
+  internshipForm;
   internCreated = false;
+  internForm : FormGroup;
 
   constructor(
     private internshipService: InternshipService,
     private internList: InternshipListService) { }
 
   ngOnInit() {
+    this.internForm = new FormGroup({
+      'initials': new FormControl(null, [Validators.required, Validators.minLength(3)]),
+      'name': new FormControl(null, Validators.required),
+      'visitDate': new FormControl(null, Validators.required),
+      'IDOfInternship': new FormControl(null, Validators.required),
+      'companyName': new FormControl(null, Validators.required),
+      'companyPerson': new FormControl(null),
+      'companyTrends': new FormControl(null),
+      'companyQualification': new FormControl(null),
+      'studentQualification': new FormControl(null),
+      'cooperation': new FormControl(null),
+      'miscellaneous': new FormControl(null)
+    });
   }
 
   onSuggestTeacher(){
     const teacherInitials = 'Test';
-    this.internshipForm.form.patchValue({
+    this.internForm.patchValue({
       initials: teacherInitials
     });
   }
 
   onSuggestAll(){
-    this.internshipForm.form.setValue({
+    this.internForm.setValue({
       initials: 'AT',
       name: 'Mark Zuckerberg',
       visitDate: '2017-05-03',
@@ -47,9 +62,7 @@ export class InternshipNewComponent implements OnInit {
   }
 
   onSubmitInternshipForm(){
-    // this.userInput.initials = this.internshipForm.value.initials;
-    // this.internships.push({
-      let value = this.internshipForm.value;
+      let value = this.internForm.value;
       let intern = { data : { 
         initials : value.initials,
         name : value.name,
@@ -70,7 +83,7 @@ export class InternshipNewComponent implements OnInit {
             this.internshipCreated();
             this.internList.internships.push(response.json());
             console.log(response);
-            this.internshipForm.reset();
+            this.internForm.reset();
           }
         );
   }

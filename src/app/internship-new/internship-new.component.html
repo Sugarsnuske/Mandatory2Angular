@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <!--<h2>Fill</h2>-->
 <!-- #f="ngForm" makes it possible to get the javascript-Object of the form values -->
-  <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
+
+  <form (ngSubmit)="onSubmitInternshipForm()" [formGroup]="internForm" >
         <h2>New Internship Report</h2>
         <h1 *ngIf="internCreated" class="">NEW INTERN IS CREATED</h1>
         <!-- Initials -->
@@ -11,14 +11,11 @@
       <input type="text" 
         id="initials" 
         class="form-control flex-item" 
-        ngModel
-        name="initials"
-        required
-        #initials="ngModel">
+        formControlName="initials">
     </div>
         
     <!-- Validation for "Initials" -->
-    <div class="help-block" *ngIf="!initials.valid && initials.touched">
+    <div class="help-block" *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">
       <label class="requiredValidator">Please enter your initials!</label>
     </div>
 
@@ -29,15 +26,11 @@
         type="text" 
         id="name" 
         class="form-control flex-item"
-        ngModel
-        name="name"
-        required
-        ng-class="{red: test.something.}"
-        #name="ngModel">
+        formControlName="name">
     </div>
 
     <!-- Validation for "Student Name" -->
-    <div class="help-block" *ngIf="!name.valid && name.touched">
+    <div class="help-block" *ngIf="!internForm.get('name').valid && internForm.get('name').touched">
       <label class="requiredValidator">Please enter the Student's Name!</label>
     </div>
 
@@ -54,14 +47,11 @@
         type="date" 
         id="visitDate" 
         class="form-control flex-item"
-        ngModel 
-        name="visitDate"
-        required
-        #visitDate="ngModel">
+        formControlName="visitDate">
     </div>
 
     <!-- Validation for "Visit Date" -->
-    <div class="help-block" *ngIf="!visitDate.valid && visitDate.touched">
+    <div class="help-block" *ngIf="!internForm.get('visitDate').valid && internForm.get('visitDate').touched">
       <label class="requiredValidator">Please enter the date of the visit!</label>
     </div>
 
@@ -72,14 +62,11 @@
         type="text" 
         id="IDOfInternship" 
         class="form-control flex-item"
-        ngModel 
-        name="IDOfInternship"
-        required
-        #IDOfInternship="ngModel">
+        formControlName="IDOfInternship">
     </div>
 
     <!-- Validation for "ID of Internship" -->
-    <div class="help-block" *ngIf="!IDOfInternship.valid && IDOfInternship.touched">
+    <div class="help-block" *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">
       <label class="requiredValidator">Please enter the ID!</label>
     </div>
 
@@ -90,14 +77,11 @@
         type="text" 
         id="companyName" 
         class="form-control flex-item"
-        ngModel 
-        name="companyName"
-        required
-        #companyName="ngModel">
+        formControlName="companyName">
     </div>
 
     <!-- Validation for "Company Name" -->
-    <div class="help-block" *ngIf="!companyName.valid && companyName.touched" >
+    <div class="help-block" *ngIf="!internForm.get('companyName').valid && internForm.get('companyName').touched" >
       <label class="requiredValidator">Please enter the Company Name!</label>
     </div>
 
@@ -108,8 +92,7 @@
         type="text" 
         id="companyPerson" 
         class="form-control flex-item"
-        ngModel 
-        name="companyPerson">
+        formControlName="companyPerson">
     </div>
 
     <!-- Company Trends -->
@@ -119,8 +102,7 @@
         type="text" 
         id="companyTrends" 
         class="form-control flex-item"
-        ngModel 
-        name="companyTrends">
+        formControlName="companyTrends">
     </div>
 
     <!-- Company Qualification -->
@@ -130,8 +112,7 @@
         type="text" 
         id="companyQualification" 
         class="form-control flex-item"
-        ngModel 
-        name="companyQualification">
+        formControlName="companyQualification">
     </div>
 
     <!-- Student Qualification -->
@@ -141,8 +122,7 @@
         type="text" 
         id="studentQualification" 
         class="form-control flex-item"
-        ngModel 
-        name="studentQualification">
+        formControlName="studentQualification">
     </div>
 
     <!-- Cooperation -->
@@ -152,8 +132,7 @@
         type="text" 
         id="cooperation" 
         class="form-control flex-item"
-        ngModel 
-        name="cooperation">
+        formControlName="cooperation">
     </div>
 
     <!-- Miscellaneous -->
@@ -163,17 +142,25 @@
         rows="5" 
         id="miscellaneous" 
         class="form-control flex-item"
-        ngModel 
-        name="miscellaneous">
+        formControlName="miscellaneous">
       </textarea>
     </div>
 
     <!-- Required fields label -->
     <label class="required-star">* Required fields</label>
 
+    <div class="help-block" *ngIf="!internForm.valid && internForm.touched" >
+      <label>Please enter valid information:</label>
+      <label *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">Initials</label>
+      <label *ngIf="!internForm.get('name').valid && internForm.get('name').touched">Name</label>
+      <label *ngIf="!internForm.get('visitDate').valid && internForm.get('visitDate').touched">Visit Date</label>
+      <label *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">IDOfInternship</label>
+      <label *ngIf="!internForm.get('companyName').valid && internForm.get('companyName').touched">Company Name</label>
+    </div>
+
     <!-- Add Internship Report button -->
     <div class="flex-container">
-      <button class="btn btn-primary flex-item" type="submit" [disabled]="!f.valid"><span>Internship Report</span></button>
+      <button class="btn btn-primary flex-item" type="submit" [disabled]="!internForm.valid"><span>Internship Report</span></button>
     </div>
 
   </form>
