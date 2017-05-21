@@ -16,15 +16,16 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InternshipDeleteComponent } from './internship-list/internship-details/internship-delete/internship-delete.component';
+import { InternshipEditComponent } from './internship-list/internship-details/internship-edit/internship-edit.component';
 
 /* Routings */
 const appRoutes: Routes = [
    { path: '', component: HomeComponent},
    { path: 'internship-list', component: InternshipListComponent
-   ,
-     children: [
-       { path: ':id', component: InternshipDeleteComponent },
-     ] 
+  //  ,
+  //    children: [
+  //      { path: ':id', component: InternshipDeleteComponent },
+  //    ] 
    },
    { path: 'internship-new', component: InternshipNewComponent},
    { path: '**', component: PageNotFoundComponent } 
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     PageNotFoundComponent,
-    InternshipDeleteComponent
+    InternshipDeleteComponent,
+    InternshipEditComponent
   ],
   imports: [
     BrowserModule,
