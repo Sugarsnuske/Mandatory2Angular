@@ -1,9 +1,10 @@
   <!-- Delete Modal -->
-  <div class="modal fade" #deleteModal id="deleteModal" role="dialog" ng-show="show">
+  <div bsModal class="modal fade" #deleteModal="bs-modal"
+    id="deleteModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Warning</h4>
         </div>
         <div class="modal-body">
@@ -15,8 +16,8 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
           <!--<button type="button" (click)="test()">Test</button>-->
-          <span><button type="button" class="btn btn-default" (click)="onDeletePressed()" 
-            data-dissmiss="modal">Yes, I'm sure</button></span>
+          <span><button type="button" class="btn btn-default" data-dismiss="modal" (click)="onDeletePressed()"
+          >Yes, I'm sure</button></span>
         </div>
       </div>
     </div>

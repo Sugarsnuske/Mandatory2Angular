@@ -21,6 +21,7 @@ export class InternshipDetailsComponent implements OnInit {
   isUpdated = false;
   deletePressed: boolean;
   details = "Details";
+  isDeleted = false;
   
   //internship properties
   id;
@@ -71,14 +72,8 @@ export class InternshipDetailsComponent implements OnInit {
   }
 
   onDelete(){
-    if (this.deletePressed){
-      this.deletePressed = false;
-    } else {
       this.deletePressed = true;
       this.internshipListComponent.checkOpen(this, "delete");
-    } 
-    
-    console.log(this.deletePressed);
   }
 
   onEdit(){
@@ -121,6 +116,16 @@ export class InternshipDetailsComponent implements OnInit {
       this.details = "Close";
       this.internshipListComponent.checkOpen(this, "details");
     }   
+  }
+
+  internDeleted() {
+    this.isDeleted = true;
+    console.log(this.isDeleted);
+    setTimeout(() => {
+      this.isDeleted = false;
+      console.log(this.isDeleted);
+    }, 4000);
+    console.log("intern is deleted")
   }
 
 }

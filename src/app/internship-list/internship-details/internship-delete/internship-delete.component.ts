@@ -1,4 +1,7 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, Output, ViewChild, EventEmitter } from '@angular/core';
+import { Response } from '@angular/http';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ModalDirective, ModalModule } from 'ngx-bootstrap/modal';
 
 import { InternshipService } from './../../internship.service';
 import { InternshipListService } from './../../internship-list.service';
@@ -10,14 +13,18 @@ import { InternshipListService } from './../../internship-list.service';
 })
 export class InternshipDeleteComponent implements OnInit {
   @Input('internToBeDeleted') intern;
-  @ViewChild('delteModal') modal;
-  show = true;
+  @ViewChild('deleteModal') modal: ModalDirective;
+  isDeleted = false;
+  @Output() onInternDeleted = new EventEmitter<any>();
 
   constructor(private internshipListService: InternshipListService,
-              private internshipService: InternshipService
+              private internshipService: InternshipService,
+              private router : Router,
+              private route: ActivatedRoute
               ) { }
 
   ngOnInit() {
+    console.log(this.modal);
   }
 
   onDeletePressed() {
@@ -25,17 +32,13 @@ export class InternshipDeleteComponent implements OnInit {
       
       this.internshipService.delete(this.intern._id)
       .subscribe(
-        (response) => {
-          console.log(response.headers);
-          
-          let i = this.internshipListService.internships.indexOf(this.intern);
-          this.internshipListService.internships.splice(i, 1);
+        (response : Response) => {
+          this.onInternDeleted.emit();
+          setTimeout(() => {
+            let i = this.internshipListService.internships.indexOf(this.intern);
+            this.internshipListService.internships.splice(i, 1);
+          }, 3000);
         },(error: Error) => console.log(error)
       );
   }
-
-  test(){
-    setTimeout(this.onDeletePressed(), 2000);
-  }
-
 }

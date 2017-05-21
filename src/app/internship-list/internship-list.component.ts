@@ -24,6 +24,8 @@ export class InternshipListComponent implements OnInit {
   @ViewChild('f') internshipForm : NgForm;
   detailsOpen : any;
   internToDelete: any;
+  intern: any;
+  internDeleted;
 
   constructor(
     private internshipService: InternshipService,
@@ -42,29 +44,42 @@ export class InternshipListComponent implements OnInit {
   }
 
   /* Check if any listItem is open and close if other one is open */
-  checkOpen(el: any, state: string) {
-    switch (state) {
-      case "details": 
-        if (this.detailsOpen != el && this.detailsOpen != undefined){          
-          this.detailsOpen.update = false;
-          this.detailsOpen.details = "Details"
-          this.detailsOpen = el;
-        } else {
-          this.detailsOpen = el;
-        }
-        break;
-      case "delete":
-        if(this.internToDelete != el && this.internToDelete != undefined){
-          this.internToDelete.deletePressed = false;
-          this.internToDelete = el;
-        } else {
-          this.internToDelete = el;
-        }
-        break;
-      default:
-        break;
-    }
+  // checkOpen(el: any, state: string) {
+  //   switch (state) {
+  //     case "details": 
+  //       if (this.detailsOpen != el && this.detailsOpen != undefined){          
+  //         this.detailsOpen.update = false;
+  //         this.detailsOpen.details = "Details"
+  //         this.detailsOpen = el;
+  //       } else {
+  //         this.detailsOpen = el;
+  //       }
+  //       break;
+  //     case "delete":
+  //       if(this.internToDelete != el && this.internToDelete != undefined){
+  //         this.internToDelete.deletePressed = false;
+  //         this.internToDelete = el;
+  //       } else {
+  //         this.internToDelete = el;
+  //       }
+  //       break;
+  //     default:
+  //       break;
+  //   }
       
+  // }
+
+  /* Check if any listItem is open and close if other one is open */
+  checkOpen(el: any, state: string) {
+    if (this.intern != el && this.intern != undefined){
+      this.intern.update = false;
+      this.intern.details = "Details"
+      if(state === "delete"){
+        this.intern.deletePressed = false;
+      }
+    }
+    this.intern = el;
+    console.log(this.intern.id);      
   }
   
 }

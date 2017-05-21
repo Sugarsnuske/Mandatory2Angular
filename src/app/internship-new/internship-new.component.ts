@@ -13,6 +13,7 @@ import { InternshipListService } from '../internship-list/internship-list.servic
 })
 export class InternshipNewComponent implements OnInit {
   @ViewChild('f') internshipForm : NgForm;
+  internCreated = false;
 
   constructor(
     private internshipService: InternshipService,
@@ -66,11 +67,19 @@ export class InternshipNewComponent implements OnInit {
       this.internshipService.post(intern)
         .subscribe(
           (response : Response) => {
+            this.internshipCreated();
             this.internList.internships.push(response.json());
             console.log(response);
             this.internshipForm.reset();
           }
         );
+  }
+
+  internshipCreated(){
+    this.internCreated = true;
+    setTimeout(() => {
+      this.internCreated = false;
+    }, 3000);
   }
 
   // private generateId() {

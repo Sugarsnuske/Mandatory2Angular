@@ -1,9 +1,11 @@
 <div class="container">
     <div class="headline-animation"> Internship Report - {{ intern?.data?.name }} </div>
     <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
-    <span><button type="button" class="btn btn-danger" data-toggle="modal" 
-        data-target="#deleteModal" (click)="onDelete(intern)">Delete
-    </button></span>
+    <span>
+        <button type="button" class="btn btn-danger" data-toggle="modal" 
+            data-target="#deleteModal" (click)="onDelete(intern)">Delete
+        </button>
+    </span>
     <span><button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button></span>
 
     <div *ngIf="isUpdated">Is now updated</div>
@@ -118,5 +120,8 @@
     </div>
 </div>
 </div>
-<app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern"></app-internship-delete>
+</div>
+<app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern" (onInternDeleted)="internDeleted()"></app-internship-delete>
+<div *ngIf="isDeleted" class="isDeleted">
+    This intern is now deleted  
 </div>

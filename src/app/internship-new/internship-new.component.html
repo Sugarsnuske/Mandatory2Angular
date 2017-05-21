@@ -4,6 +4,7 @@
 <!-- #f="ngForm" makes it possible to get the javascript-Object of the form values -->
   <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
         <h2>New Internship Report</h2>
+        <h1 *ngIf="internCreated" class="">NEW INTERN IS CREATED</h1>
         <!-- Initials -->
     <div class="form-group flex-container">
       <label class="flex-item" for="initials">Initials *</label>
