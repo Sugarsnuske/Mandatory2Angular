@@ -1,5 +1,5 @@
 import { Response } from '@angular/http';
-import { Component, OnInit, ViewChild, Output } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, Output } from '@angular/core';
 import { 
     FormGroup, 
     ReactiveFormsModule, 
@@ -12,6 +12,7 @@ import {
 import { InternshipService } from './internship.service';
 import { InternshipListService } from './internship-list.service';
 import { InternshipDetailsComponent } from './internship-details/internship-details.component';
+import { SearchBox } from './search-box';
 
 @Component({
   selector: 'app-internship-list',

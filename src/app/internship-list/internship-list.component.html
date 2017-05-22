@@ -1,7 +1,8 @@
 <div class="container container-transitions">
     <h2>All Internship Reports</h2>
     <div>
-        <a *ngFor="let el of interns; let i = index">
+        <input placeholder="Search studentname ..." [(ngModel)]="searchString">
+        <a *ngFor="let el of interns | search: searchString; let i = index">
             <app-internship-details [intern]="el"></app-internship-details>
             <hr>
             <!--Seperator-->

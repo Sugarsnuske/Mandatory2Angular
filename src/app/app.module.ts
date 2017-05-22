@@ -17,6 +17,8 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InternshipDeleteComponent } from './internship-list/internship-details/internship-delete/internship-delete.component';
 import { InternshipEditComponent } from './internship-list/internship-details/internship-edit/internship-edit.component';
+import { SearchPipe } from './internship-list/search.pipe';
+import { SearchBox } from './internship-list/search-box';
 
 /* Routings */
 const appRoutes: Routes = [
@@ -42,7 +44,9 @@ const appRoutes: Routes = [
     HomeComponent,
     PageNotFoundComponent,
     InternshipDeleteComponent,
-    InternshipEditComponent
+    InternshipEditComponent,
+    SearchPipe,
+    SearchBox
   ],
   imports: [
     BrowserModule,
