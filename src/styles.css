@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+/*Media Queries*/
+@media screen and (max-width: 320px) {
+  .internship-container {
+    width: 280px; }
+    .internship-container h1 {
+      font-size: 12px; }
+    .internship-container h2 {
+      font-size: 8px; } }
+@media screen and (min-width: 321px) and (max-width: 420px) {
+  .internship-container {
+    width: 390px; }
+    .internship-container h1 {
+      font-size: 16px; }
+    .internship-container h2 {
+      font-size: 11px; } }
+@media screen and (min-width: 421px) and (max-width: 699px) {
+  .internship-container {
+    width: 600px; }
+    .internship-container h1 {
+      font-size: 20px; }
+    .internship-container h2 {
+      font-size: 14px; } }
+@media screen and (min-width: 700px) and (max-width: 999px) {
+  .internship-container {
+    width: 800px; }
+    .internship-container h1 {
+      font-size: 24px; }
+    .internship-container h2 {
+      font-size: 18px; } }
+@media screen and (min-width: 1000px) {
+  .internship-container {
+    width: 900px; }
+    .internship-container h1 {
+      font-size: 30px; }
+    .internship-container h2 {
+      font-size: 22px; } }
+
+/*# sourceMappingURL=styles.css.map */

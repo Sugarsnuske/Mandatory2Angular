@@ -10,10 +10,10 @@
 body{
     background-color: cornflowerblue;
     // background-image: url(https://wallpaperscraft.com/image/lines_faded_form_background_46920_2560x1600.jpg);
-    background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    //background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: cover;
     padding: 20px 0px;
 }
 
@@ -50,76 +50,76 @@ body{
     background-color: $containerBGColor3;
 }
 
-/*Media Queries*/
-@media screen and (max-width: 320px){
-    .internship-container{
-        width: 280px;
+// /*Media Queries*/
+// @media screen and (max-width: 320px){
+//     .internship-container{
+//         width: 280px;
 
-        h1{
-            font-size: 12px;
-        }            
+//         h1{
+//             font-size: 12px;
+//         }            
 
-        h2{
-            font-size: 8px;
-        }
-    }
-}
+//         h2{
+//             font-size: 8px;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 321px) and (max-width: 420px){
-    .internship-container{
-        width: 390px;
+// @media screen and (min-width: 321px) and (max-width: 420px){
+//     .internship-container{
+//         width: 390px;
 
-        h1{
-            font-size: 16px;
-        }            
+//         h1{
+//             font-size: 16px;
+//         }            
 
-        h2{
-            font-size: 11px;
-        }
-    }
-}
+//         h2{
+//             font-size: 11px;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 421px) and (max-width: 699px){
-    .internship-container{
+// @media screen and (min-width: 421px) and (max-width: 699px){
+//     .internship-container{
         
-        width: 600px;
+//         width: 600px;
 
-        h1{
-            font-size: 20px;
-        }            
+//         h1{
+//             font-size: 20px;
+//         }            
 
-        h2{
-            font-size: 14px;
-        }
-    }
-}
+//         h2{
+//             font-size: 14px;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 700px) and (max-width: 999px){
-    .internship-container{
+// @media screen and (min-width: 700px) and (max-width: 999px){
+//     .internship-container{
         
-        width: 800px;
+//         width: 800px;
 
-        h1{
-            font-size: 24px;
-        }            
+//         h1{
+//             font-size: 24px;
+//         }            
 
-        h2{
-            font-size: 18px;
-        }
-    }
-}
+//         h2{
+//             font-size: 18px;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 1000px){
-    .internship-container{
+// @media screen and (min-width: 1000px){
+//     .internship-container{
         
-        width: 900px;
+//         width: 900px;
 
-        h1{
-            font-size: 30px;
-        }            
+//         h1{
+//             font-size: 30px;
+//         }            
 
-        h2{
-            font-size: 22px;
-        }
-    }
-}
+//         h2{
+//             font-size: 22px;
+//         }
+//     }
+// }
