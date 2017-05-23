@@ -1,0 +1,15 @@
+@mixin h1FontStack($family: 'Lato', $weight: '400', $size: '30px'){
+    font: {
+        family: $family;
+        weight: $weight;
+        size: $size;
+    }
+}
+
+@mixin bodyFontStack($family: 'Lato', $weight: '400', $size: '15px'){
+    font: {
+        family: $family;
+        weight: $weight;
+        size: $size;
+    }
+}

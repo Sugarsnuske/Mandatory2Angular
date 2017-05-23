@@ -1,6 +1,5 @@
 /*Imports*/
 /*Variables to use in 'app.component.scss'. Mostly made to exercise with the SASS structure*/
-/*Colors*/
 * {
   margin: 0;
   /*Reset margin*/
@@ -10,11 +9,6 @@
   /*Changes the original box-model to the border-box model*/ }
 
 body {
-  background-color: cornflowerblue;
-  background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding: 20px 0px; }
 
 .jumbotron {
@@ -25,7 +19,7 @@ body {
   text-align: center;
   margin: 5px 0px;
   padding: 7px 0px;
-  color: whitesmoke; }
+  color: #676767; }
 
 .jumbotron h2 {
   color: lightgrey; }
@@ -40,42 +34,5 @@ body {
 
 #internship-reports {
   background-color: rgba(0, 0, 0, 0.5); }
-
-/*Media Queries*/
-@media screen and (max-width: 320px) {
-  .internship-container {
-    width: 280px; }
-    .internship-container h1 {
-      font-size: 12px; }
-    .internship-container h2 {
-      font-size: 8px; } }
-@media screen and (min-width: 321px) and (max-width: 420px) {
-  .internship-container {
-    width: 390px; }
-    .internship-container h1 {
-      font-size: 16px; }
-    .internship-container h2 {
-      font-size: 11px; } }
-@media screen and (min-width: 421px) and (max-width: 699px) {
-  .internship-container {
-    width: 600px; }
-    .internship-container h1 {
-      font-size: 20px; }
-    .internship-container h2 {
-      font-size: 14px; } }
-@media screen and (min-width: 700px) and (max-width: 999px) {
-  .internship-container {
-    width: 800px; }
-    .internship-container h1 {
-      font-size: 24px; }
-    .internship-container h2 {
-      font-size: 18px; } }
-@media screen and (min-width: 1000px) {
-  .internship-container {
-    width: 900px; }
-    .internship-container h1 {
-      font-size: 30px; }
-    .internship-container h2 {
-      font-size: 22px; } }
 
 /*# sourceMappingURL=app.component.css.map */

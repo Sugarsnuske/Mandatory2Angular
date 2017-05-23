@@ -1,6 +1,7 @@
 .navbar {
   background: none;
   border: none;
-  color: grey; }
+  color: grey;
+  float: right; }
 
 /*# sourceMappingURL=header.component.css.map */

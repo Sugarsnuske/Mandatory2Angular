@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/style/scss/vars.scss';
 
 body{
     background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    //background-color: cornflowerblue;
+    //background-color: $mainBgColor;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /*Media Queries*/

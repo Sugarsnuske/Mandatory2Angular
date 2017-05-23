@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/*Variables to use in 'app.component.scss'. Mostly made to exercise with the SASS structure*/
 body {
   background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
   background-repeat: no-repeat;

@@ -1,5 +1,4 @@
-/*Variables to use in 'internship-new.component.scss'. Mostly made to exercise with the SASS structure*/
-/*Colors*/
+/*Variables to use in 'app.component.scss'. Mostly made to exercise with the SASS structure*/
 * {
   margin: 0;
   /*Reset margin*/
@@ -48,7 +47,7 @@ label {
 
 input.ng-invalid.ng-touched {
   border-color: #d72828;
-  background: url(../../../_img/Error-128.png);
+  background: url(../../../assets/_img/Error-128.png);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: right;

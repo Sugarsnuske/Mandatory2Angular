@@ -1,0 +1,20 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+
+.jumbotron{
+    // background-color: $containerBGColor1;
+    background: none;
+    border-radius: 10px;
+}
+
+.jumbotron h1, .jumbotron h2{
+    @include h1FontStack($family: 'Lato', $weight: '400', $size: '30px');
+    text-align: center;
+    margin: 5px 0px;
+    padding: 7px 0px;
+    color: $h1Color;
+}
+
+// .jumbotron h2{
+//      color: $internshipHeadingColor;
+// }
