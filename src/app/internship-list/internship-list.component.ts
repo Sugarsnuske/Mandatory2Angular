@@ -80,7 +80,7 @@ export class InternshipListComponent implements OnInit {
       }
     }
     this.intern = el;
-    console.log(this.intern.id);      
+    console.log(this.intern);      
   }
   
 }

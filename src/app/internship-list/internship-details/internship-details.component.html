@@ -3,7 +3,7 @@
     <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
     <span>
         <button type="button" class="btn btn-danger" data-toggle="modal" 
-            data-target="#deleteModal" (click)="onDelete(intern)">Delete
+            data-target="#deleteModal" (click)="onDelete()">Delete
         </button>
     </span>
     <span><button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button></span>
@@ -42,7 +42,7 @@
     <app-internship-edit [intern]="intern" (onInternUpdated)="internUpdated()" ></app-internship-edit>
 </div>
 </div>
-<app-internship-delete *ngIf="deletePressed" (internToBeDeleted)="intern" (onInternDeleted)="internDeleted()"></app-internship-delete>
+<app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern" (onInternDeleted)="internDeleted()"></app-internship-delete>
 <div *ngIf="isDeleted" class="isDeleted">
     This intern is now deleted  
 </div>

@@ -6,7 +6,6 @@ import { InternshipListComponent } from './internship-list/internship-list.compo
 import { InternshipDetailsComponent } from './internship-list/internship-details/internship-details.component';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
-import { ModalModule } from 'ngx-bootstrap/modal';
 
 /* Application-wide when in the app.module */
 import { InternshipService } from './internship-list/internship.service';
@@ -53,8 +52,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
-    ModalModule.forRoot()
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [InternshipService, InternshipListService],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, ViewChild, EventEmitter } from '@angular/core';
 import { Response } from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ModalDirective, ModalModule } from 'ngx-bootstrap/modal';
 
 import { InternshipService } from './../../internship.service';
 import { InternshipListService } from './../../internship-list.service';
@@ -13,7 +12,6 @@ import { InternshipListService } from './../../internship-list.service';
 })
 export class InternshipDeleteComponent implements OnInit {
   @Input('internToBeDeleted') intern;
-  @ViewChild('deleteModal') modal: ModalDirective;
   isDeleted = false;
   @Output() onInternDeleted = new EventEmitter<any>();
 
@@ -24,7 +22,7 @@ export class InternshipDeleteComponent implements OnInit {
               ) { }
 
   ngOnInit() {
-    console.log(this.modal);
+    console.log(this.intern);
   }
 
   onDeletePressed() {
