@@ -23,7 +23,7 @@ export class InternshipNewComponent implements OnInit {
 
   ngOnInit() {
     this.internForm = new FormGroup({
-      'initials': new FormControl(null, [Validators.required, Validators.minLength(3)]),
+      'initials': new FormControl(null, [Validators.required, Validators.minLength(2)]),
       'name': new FormControl(null, Validators.required),
       'visitDate': new FormControl(null, Validators.required),
       'IDOfInternship': new FormControl(null, Validators.required),

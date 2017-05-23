@@ -42,7 +42,8 @@
     <app-internship-edit [intern]="intern" (onInternUpdated)="internUpdated()" ></app-internship-edit>
 </div>
 </div>
-<app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern" (onInternDeleted)="internDeleted()"></app-internship-delete>
+<app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern" 
+    (onInternDeleted)="internDeleted()"></app-internship-delete>
 <div *ngIf="isDeleted" class="isDeleted">
     This intern is now deleted  
 </div>
