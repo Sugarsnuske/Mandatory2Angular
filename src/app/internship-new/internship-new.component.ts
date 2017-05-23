@@ -9,7 +9,7 @@ import { InternshipListService } from '../internship-list/internship-list.servic
 @Component({
   selector: 'app-internship-new',
   templateUrl: './internship-new.component.html',
-  styleUrls: ['./internship-new.component.scss']
+  styleUrls: ['../style/scss/internship-new.component.scss']
 })
 export class InternshipNewComponent implements OnInit {
   // @ViewChild('f') internshipForm : NgForm;

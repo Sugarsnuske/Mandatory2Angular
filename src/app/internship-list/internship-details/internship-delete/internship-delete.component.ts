@@ -8,7 +8,7 @@ import { InternshipListService } from './../../internship-list.service';
 @Component({
   selector: 'app-internship-delete',
   templateUrl: './internship-delete.component.html',
-  styleUrls: ['./internship-delete.component.scss']
+  styleUrls: ['../../../style/scss/internship-delete.component.scss']
 })
 export class InternshipDeleteComponent implements OnInit {
   @Input('internToBeDeleted') intern;

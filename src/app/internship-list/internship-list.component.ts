@@ -17,7 +17,7 @@ import { SearchBox } from './search-box';
 @Component({
   selector: 'app-internship-list',
   templateUrl: './internship-list.component.html',
-  styleUrls: ['./internship-list.component.scss'],
+  styleUrls: ['../style/scss/internship-list.component.scss'],
   providers: []
 })
 export class InternshipListComponent implements OnInit {

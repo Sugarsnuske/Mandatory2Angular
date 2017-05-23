@@ -9,7 +9,7 @@ import { InternshipListComponent } from '.././../internship-list.component';
 @Component({
   selector: 'app-internship-edit',
   templateUrl: './internship-edit.component.html',
-  styleUrls: ['./internship-edit.component.scss']
+  styleUrls: ['../../../style/scss/internship-edit.component.scss']
 })
 export class InternshipEditComponent implements OnInit {
   @ViewChild('f') internshipForm : NgForm;

@@ -7,7 +7,7 @@ import { InternshipListComponent } from './../internship-list.component';
 @Component({
   selector: 'app-internship-details',
   templateUrl: './internship-details.component.html',
-  styleUrls: ['./internship-details.component.scss'],
+  styleUrls: ['../../style/scss/internship-details.component.scss'],
   providers: []
 })
 export class InternshipDetailsComponent implements OnInit {
