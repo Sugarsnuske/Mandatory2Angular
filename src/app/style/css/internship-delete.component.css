@@ -1,3 +1,16 @@
+h4 {
+  color: black;
+  font-size: 18px;
+  font-family: 'Verdana';
+  font-weight: 400; }
 
+p {
+  color: black;
+  font-size: 15px;
+  font-family: 'Verdana';
+  font-weight: 400; }
+
+.modal-header {
+  background-color: #FFBABA; }
 
 /*# sourceMappingURL=internship-delete.component.css.map */

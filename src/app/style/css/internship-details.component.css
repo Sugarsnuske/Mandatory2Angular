@@ -6,20 +6,11 @@
 .container {
   margin: 20px; }
 
-.headline-animation {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: typing 3.5s steps(30, end), blink-caret 1s step-end infinite; }
-
 label {
-  font-family: "Lato";
-  font-weight: "400";
-  font-font-size: "12px";
-  color: #000;
+  color: whitesmoke;
+  font-weight: bold;
   font-size: 18px;
-  font-family: 'Verdana';
-  font-weight: 400; }
+  font-family: 'Verdana'; }
 
 input[type=text], textarea {
   width: 40%; }
@@ -28,6 +19,9 @@ input[type=text], textarea {
 
 input[type=date] {
   width: 40%; }
+
+.isDeleted {
+  color: #FFBABA; }
 
 /*Keyframes*/
 /*Media Queries*/

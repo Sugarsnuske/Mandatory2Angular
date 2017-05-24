@@ -30,7 +30,7 @@
     <!-- #f="ngForm" makes it possible to get the javascript-Object of the form values -->
       <form (ngSubmit)="onSubmitInternshipForm()" [formGroup]="internForm" >
             <h1>Create New Internship Report</h1>
-            <h1 *ngIf="internCreated" class="">New Intern is created</h1>
+            <h1 *ngIf="internCreated" class="internCreated">New Internship Report is now created!</h1>
             <!-- Initials -->
         <div class="form-group flex-container">
           <label class="flex-item" for="initials">Initials *</label>
@@ -173,14 +173,14 @@
         </div>
 
         <!-- Required fields label -->
-        <label class="required-star">* Required fields</label>
+        <!--<label class="required-star">* Required fields</label>-->
 
         <div class="help-block" *ngIf="!internForm.valid && internForm.touched" >
-          <label>Please enter valid information:</label>
+          <label class="required-star">* Please enter valid information:</label>
           <label *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">Initials</label>
-          <label *ngIf="!internForm.get('name').valid && internForm.get('name').touched">Name</label>
+          <label *ngIf="!internForm.get('name').valid && internForm.get('name').touched">Name of student</label>
           <label *ngIf="!internForm.get('visitDate').valid && internForm.get('visitDate').touched">Visit Date</label>
-          <label *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">IDOfInternship</label>
+          <label *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">ID Of Internship</label>
           <label *ngIf="!internForm.get('companyName').valid && internForm.get('companyName').touched">Company Name</label>
         </div>
 

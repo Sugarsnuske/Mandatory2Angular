@@ -1,3 +1,13 @@
+h4 {
+  color: black;
+  font-size: 18px;
+  font-family: 'Verdana';
+  font-weight: 400; }
 
+label {
+  color: black;
+  font-size: 15px;
+  font-family: 'Verdana';
+  font-weight: 400; }
 
 /*# sourceMappingURL=internship-edit.component.css.map */

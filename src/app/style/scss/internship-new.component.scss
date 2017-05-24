@@ -13,7 +13,7 @@
     margin: 0 auto;
     margin-top: 50px;
     // border: 1px white solid;
-    background-color: $containerBGColor1;
+    background-color: $containerBGColor;
     border-radius: 7px;
 }
 
@@ -108,6 +108,17 @@ input.ng-invalid.ng-touched{
     // }
 }
 
+.required-star {
+    // text-align: left;
+    color: #FFBABA;
+}
+
+.internCreated {
+    color: green;
+    font-size: 20px;
+}
+
+
 //Small transformations for "Suggest Teacher" and "Suggest All" buttons
 .btn-info:active{
     transform: translateY(4px);
@@ -146,8 +157,6 @@ input.ng-invalid.ng-touched{
 .btn-primary:active{
     transform: translateX(4px);
 }
-
-
 
 /*Media Queries*/
 // @media screen and (max-width: 320px){

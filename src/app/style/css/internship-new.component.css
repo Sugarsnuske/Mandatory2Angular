@@ -82,6 +82,13 @@ input.ng-invalid.ng-touched {
   padding-bottom: 10px;
   font-size: 20px; }
 
+.required-star {
+  color: #FFBABA; }
+
+.internCreated {
+  color: green;
+  font-size: 20px; }
+
 .btn-info:active {
   transform: translateY(4px); }
 

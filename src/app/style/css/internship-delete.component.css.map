@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,EAAG;EACC,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,SAAS;EACtB,WAAW,EAAE,GAAG;;AAGpB,CAAE;EACE,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,SAAS;EACtB,WAAW,EAAE,GAAG;;AAOpB,aAAc;EACV,gBAAgB,EAAE,OAAO",
+"sources": ["../scss/internship-delete.component.scss"],
 "names": [],
 "file": "internship-delete.component.css"
 }

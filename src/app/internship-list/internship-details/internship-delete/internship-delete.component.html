@@ -1,21 +1,23 @@
   <!-- Delete Modal -->
  <div class="modal fade" #deleteModal id="deleteModal" role="dialog" ng-show="show">
-    id="deleteModal" role="dialog">
+    <!--id="deleteModal" role="dialog">-->
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Warning</h4>
         </div>
+
         <div class="modal-body">
-          <p>Are you sure to delete this?</p>
-          <p>id: {{ intern?._id }}</p>
-          <p>{{ intern?.data?.name }}</p>
+          <p>Are you sure you want to delete {{ intern?.data?.name }}'s internship report?</p>
+          <!--<p>id: {{ intern?._id }}</p>-->
+          <!--<p>{{ intern?.data?.name }}</p>-->
         </div>
+
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <span><button type="button" class="btn btn-default" data-dismiss="modal" (click)="onDeletePressed()"
-          >Yes, I'm sure</button></span>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          <span><button type="button" class="btn btn-success" data-dismiss="modal" 
+          (click)="onDeletePressed()">Yes, I'm sure</button></span>
         </div>
       </div>
     </div>

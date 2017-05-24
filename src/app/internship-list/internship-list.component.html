@@ -31,9 +31,11 @@ preserveAspectRatio="xMidYMid meet">
         <input id="search-bar" placeholder="Search for student here.." [(ngModel)]="searchString">
         <br>
         <br>
+        
         <a *ngFor="let el of interns | search: searchString; let i = index">
-            <app-internship-details [intern]="el"></app-internship-details>
-            <hr> <!--Seperator-->
+            <div class="boxes">
+                <app-internship-details [intern]="el"></app-internship-details>
+            </div>
         </a>
     </div>
 </div>

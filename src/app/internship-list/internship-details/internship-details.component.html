@@ -1,12 +1,15 @@
 <div class="container">
     <div class="headline-animation"> Internship Report - {{ intern?.data?.name }} </div>
     <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
+    <br>
     <span>
         <button type="button" class="btn btn-danger" data-toggle="modal" 
             data-target="#deleteModal" (click)="onDelete()">Delete
         </button>
     </span>
-    <span><button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button></span>
+    <span>
+        <button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button>
+    </span>
 
     <div *ngIf="isUpdated">Is now updated</div>
     <div *ngIf="update" class="update">
@@ -33,16 +36,17 @@
             <label for="Company Person">Company Person</label>
             <p>{{ intern?.data?.companyPerson }}</p>
         </div>
+        <br>
 
         <!-- Trigger the editModal with a button -->
-    <span><button type="button" class="btn btn-info" data-toggle="modal" 
-        data-target="#editModal">See More</button></span>
-    <app-internship-edit [intern]="intern" (onInternUpdated)="internUpdated()" ></app-internship-edit>
+        <span><button type="button" class="btn btn-info" data-toggle="modal" 
+            data-target="#editModal">See More</button></span>
+        <app-internship-edit [intern]="intern" (onInternUpdated)="internUpdated()" ></app-internship-edit>
     </div>
 </div>
 
 <app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern" 
     (onInternDeleted)="internDeleted()"></app-internship-delete>
 <div *ngIf="isDeleted" class="isDeleted">
-    This intern is now deleted  
+    {{ intern?.data?.name }}'s internship report is now deleted
 </div>
