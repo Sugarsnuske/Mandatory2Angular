@@ -2,9 +2,11 @@
 @import 'mixins.scss';
 
 a {
-    @include pFontStack($family: 'Lato', $weight: '400', $font-size: '12px');
+    // @include pFontStack($family: 'Verdana', $weight: '400', $font-size: '12px');
     color: $mainFontColor;
     font-size: 15px;
+    font-family: 'Verdana';
+    font-weight: 400;
 
     &:hover{
         color: $mainFontColor;
@@ -13,15 +15,21 @@ a {
 }
 
 h1 {
-    @include h1FontStack($family: 'Lato', $weight: '400', $font-size: '30px');
+    // @include h1FontStack($family: 'Verdana', $weight: '400', $font-size: '30px');
     color: $h1Color;
     text-align: center;
+    font-size: 40px;
+    font-family: 'Verdana';
+    font-weight: 400;
 }
 
 h2 {
-    @include h2FontStack($family: 'Lato', $weight: '400', $font-size: '15px');
+    // @include h2FontStack($family: 'Verdana', $weight: '400', $font-size: '15px');
     color: $mainFontColor;
     text-align: center;
+    font-size: 20px;
+    font-family: 'Verdana';
+    font-weight: 400;
 }
 
 #search-bar {

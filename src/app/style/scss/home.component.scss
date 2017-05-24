@@ -2,19 +2,25 @@
 @import 'mixins.scss';
 
 h1{
-    @include h1FontStack($family: 'Lato', $weight: '400', $font-size: '30px');
+    // @include h1FontStack($family: 'Verdana', $weight: '400', $font-size: '30px');
     text-align: center;
     margin: 5px 0px;
     padding: 7px 0px;
     color: $h1Color;
+    font-family: 'Verdana', 'sans-serif'; //Helvetica
+    font-size: 40px;
+    font-weight: 400;
 }
 
 h2{
-    @include h2FontStack($family: 'Lato', $weight: '400', $font-size: '15px');
+    // @include h2FontStack($family: 'Verdana', $weight: '400', $font-size: '15px');
     text-align: center;
     margin: 5px 0px;
     padding: 7px 0px;
     color: $mainFontColor;
+    font-family: 'Verdana', 'sans-serif'; //Helvetica
+    font-size: 20px;
+    font-weight: 400;
 }
 
 svg {
@@ -23,18 +29,60 @@ svg {
     transform: translate(25px, 25px);
 
     stroke-dasharray: 20;
-    animation: dash 10s infinite;
+    animation: dash 10s linear  infinite;
 }
 
+/*Creating dashes in the stroke of SVG shapes. 
+The higher the number, the more space in between dashes in the stroke.*/
 @keyframes dash {
   to {
     stroke-dashoffset: 1000;
   }
 }
 
-img {
-    display: block;
+.photo{
+    text-align: center;
     margin-top: 3%;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+	line-height: 0;
+	overflow: hidden;
 }
+
+.photo-container img {
+ 	max-width: 100%;
+}
+
+.photo-overlay {
+    color: #ffffff;
+	position: absolute;
+	height: 90px; //Only shows a block
+	top: 80%;
+	right: 27.5%;
+	bottom: 0; 
+	left: 27.5%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: .5s;
+    background: rgba(0, 0, 0, .65);
+
+    &:hover{
+        opacity: 0;
+    }
+
+    //h3
+
+    p{
+        font-size: 1.3em;
+        line-height: 1.25em;
+        margin-top: 0em;
+        margin-bottom: .5em;
+        color: white;
+    }
+}
+

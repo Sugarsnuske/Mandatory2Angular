@@ -1,4 +1,4 @@
-@mixin h1FontStack($family: 'Lato', $weight: '400', $font-size: '30px'){
+@mixin h1FontStack($family: 'Verdana', $weight: '400', $font-size: '30px'){
     font: {
         family: $family;
         weight: $weight;
@@ -6,7 +6,7 @@
     }
 }
 
-@mixin h2FontStack($family: 'Lato', $weight: '400', $font-size: '15px'){
+@mixin h2FontStack($family: 'Verdana', $weight: '400', $font-size: '15px'){
     font: {
         family: $family;
         weight: $weight;
@@ -14,7 +14,7 @@
     }
 }
 
-@mixin pFontStack($family: 'Lato', $weight: '400', $font-size: '12px'){
+@mixin pFontStack($family: 'Verdana', $weight: '400', $font-size: '12px'){
     font: {
         family: $family;
         weight: $weight;

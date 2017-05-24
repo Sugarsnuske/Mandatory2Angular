@@ -8,13 +8,6 @@
     /*border: 1px solid black; /*Only for testing. Will be removed/deleted when done*/
 }
 
-body{
-    // background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/K%C3%B8benhavns_Erhvervsakademi.JPG/1280px-K%C3%B8benhavns_Erhvervsakademi.JPG);
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-}
-
 .container{
     width: 850px;
     margin: 0 auto;
@@ -36,14 +29,20 @@ form{
 }
 
 h1{
-    @include h1FontStack($family: 'Lato', $weight: '400', $font-size: '30px');
-    color: $h1Color;
+    // @include h1FontStack($family: 'Verdana', $weight: '400', $font-size: '30px');
+    color: #fff;
     text-align: center;
     margin-bottom: 4%;
+    font-size: 35px;
+    font-family: 'Verdana';
+    font-weight: 400;
 }
 
 button, input, label{
     margin: 0px 5px; 
+    font-size: 15px;
+    font-family: 'Verdana';
+    font-weight: 400;
 }
 
 button, input{
@@ -60,19 +59,18 @@ button[type=submit]:disabled{
 }
 
 label{
-    @include pFontStack($family: 'Lato', $weight: '400', $font-size: '12px');
-    color: $mainFontColor;
+    // @include pFontStack($family: 'Lato', $weight: '400', $font-size: '12px');
     font-size: 18px;
     display: block;
     margin-bottom: 5px;
-    // color: $labelColor;
+    color: $labelColor;
 }
 
 /*Divs - Containers*/
 .flex-container{
-    display: -webkit-flex;
+    // display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: center;
+    // -webkit-justify-content: center;
     justify-content: center;
     margin: 5px 5px;
     padding: 5px 5px; 
@@ -90,7 +88,7 @@ input.ng-invalid.ng-touched{
     background-repeat: no-repeat;
     background-position: right;
     background-color: white;
-    // background-position-x: 250px; //Media Query Dependent
+    background-position-x: 250px; //Media Query Dependent
 }
 
 //Red text when input is invalid
@@ -100,7 +98,7 @@ input.ng-invalid.ng-touched{
 }
 
 .help-block{
-    // padding-left: 410px; //Media Query Dependent
+    padding-left: 375px; //Media Query Dependent
     margin-top: -10px;
     padding-bottom: 10px;
     font-size: 20px;

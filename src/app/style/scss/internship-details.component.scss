@@ -24,6 +24,9 @@ label {
     @include pFontStack($family: 'Lato', $weight: '400', $font-size: '12px');
     color: $h1Color;
     // color: blue;
+    font-size: 18px;
+    font-family: 'Verdana';
+    font-weight: 400;
 }
 
 input[type=text], textarea {

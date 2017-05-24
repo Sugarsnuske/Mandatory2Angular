@@ -1,38 +1,3 @@
 /*Imports*/
-/*Variables to use in 'app.component.scss'. Mostly made to exercise with the SASS structure*/
-* {
-  margin: 0;
-  /*Reset margin*/
-  padding: 0;
-  /*Reset padding*/
-  box-sizing: border-box;
-  /*Changes the original box-model to the border-box model*/ }
-
-body {
-  padding: 20px 0px; }
-
-.jumbotron {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px; }
-
-.jumbotron h1, .jumbotron h2 {
-  text-align: center;
-  margin: 5px 0px;
-  padding: 7px 0px;
-  color: whitesmoke; }
-
-.jumbotron h2 {
-  color: lightgrey; }
-
-/*Divs - Containers*/
-.internship-container {
-  margin: auto;
-  border-radius: 10px; }
-
-#internship-fillout {
-  background-color: rgba(0, 0, 0, 0.6); }
-
-#internship-reports {
-  background-color: rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=app.component.css.map */
