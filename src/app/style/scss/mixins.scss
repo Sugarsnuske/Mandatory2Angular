@@ -1,15 +1,23 @@
-@mixin h1FontStack($family: 'Lato', $weight: '400', $size: '30px'){
+@mixin h1FontStack($family: 'Lato', $weight: '400', $font-size: '30px'){
     font: {
         family: $family;
         weight: $weight;
-        size: $size;
+        font-size: $font-size;
     }
 }
 
-@mixin bodyFontStack($family: 'Lato', $weight: '400', $size: '15px'){
+@mixin h2FontStack($family: 'Lato', $weight: '400', $font-size: '15px'){
     font: {
         family: $family;
         weight: $weight;
-        size: $size;
+        font-size: $font-size;
+    }
+}
+
+@mixin pFontStack($family: 'Lato', $weight: '400', $font-size: '12px'){
+    font: {
+        family: $family;
+        weight: $weight;
+        font-size: $font-size;
     }
 }

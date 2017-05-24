@@ -1,4 +1,5 @@
 @import 'vars.scss';
+@import 'mixins.scss';
 
 *{
     margin: 0; /*Reset margin*/
@@ -7,13 +8,36 @@
     /*border: 1px solid black; /*Only for testing. Will be removed/deleted when done*/
 }
 
+body{
+    // background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/K%C3%B8benhavns_Erhvervsakademi.JPG/1280px-K%C3%B8benhavns_Erhvervsakademi.JPG);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+}
+
+.container{
+    width: 850px;
+    margin: 0 auto;
+    margin-top: 50px;
+    // border: 1px white solid;
+    background-color: $containerBGColor1;
+    border-radius: 7px;
+}
+
+svg {
+    width: 200px;
+    height: 74px;
+    transform: translate(25px, 25px);
+}
+
 form{
     padding: 20px;
     margin: 20px;
 }
 
-h2{
-    color: whitesmoke;
+h1{
+    @include h1FontStack($family: 'Lato', $weight: '400', $font-size: '30px');
+    color: $h1Color;
     text-align: center;
     margin-bottom: 4%;
 }
@@ -36,7 +60,12 @@ button[type=submit]:disabled{
 }
 
 label{
-    color: $labelColor;
+    @include pFontStack($family: 'Lato', $weight: '400', $font-size: '12px');
+    color: $mainFontColor;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+    // color: $labelColor;
 }
 
 /*Divs - Containers*/
@@ -50,7 +79,7 @@ label{
 }
 
 .flex-item{
-    width: 35%;   
+    width: 40%;   
 }
 
 //When input is 'invalid' and also 'touched', do this..
@@ -61,7 +90,7 @@ input.ng-invalid.ng-touched{
     background-repeat: no-repeat;
     background-position: right;
     background-color: white;
-    background-position-x: 250px; //Media Query Dependent
+    // background-position-x: 250px; //Media Query Dependent
 }
 
 //Red text when input is invalid
@@ -71,14 +100,14 @@ input.ng-invalid.ng-touched{
 }
 
 .help-block{
-    padding-left: 410px; //Media Query Dependent
+    // padding-left: 410px; //Media Query Dependent
     margin-top: -10px;
     padding-bottom: 10px;
     font-size: 20px;
 
-    label{
-        font-size: 15px; //Media Query Dependent
-    }
+    // label{
+    //     font-size: 15px; //Media Query Dependent
+    // }
 }
 
 //Small transformations for "Suggest Teacher" and "Suggest All" buttons
@@ -123,112 +152,112 @@ input.ng-invalid.ng-touched{
 
 
 /*Media Queries*/
-@media screen and (max-width: 320px){
-    label, input, button, span{
-        font-size: 10px;
-    }
+// @media screen and (max-width: 320px){
+//     label, input, button, span{
+//         font-size: 10px;
+//     }
 
-    h2{
-        font-size: 18px;
-    }
+//     h2{
+//         font-size: 18px;
+//     }
 
-    .help-block{
-        padding-left: 101px; 
+//     .help-block{
+//         padding-left: 101px; 
 
-        label{
-            font-size: 7px; 
-        }
-    }
+//         label{
+//             font-size: 7px; 
+//         }
+//     }
 
-    input.ng-invalid.ng-touched{
-        background-position-x: 35px; 
-    }    
-}
+//     input.ng-invalid.ng-touched{
+//         background-position-x: 35px; 
+//     }    
+// }
 
-@media screen and (min-width: 321px) and (max-width: 420px){
-    label, input, button, span{
-        font-size: 12px;
-    }
+// @media screen and (min-width: 321px) and (max-width: 420px){
+//     label, input, button, span{
+//         font-size: 12px;
+//     }
 
-    h2{
-        font-size: 19px;
-    }
+//     h2{
+//         font-size: 19px;
+//     }
 
-    .help-block{
-        padding-left: 155px; 
+//     .help-block{
+//         padding-left: 155px; 
 
-        label{
-            font-size: 9px; 
-        }
-    }
+//         label{
+//             font-size: 9px; 
+//         }
+//     }
 
-    input.ng-invalid.ng-touched{
-        background-position-x: 73px; 
-    }    
-}
+//     input.ng-invalid.ng-touched{
+//         background-position-x: 73px; 
+//     }    
+// }
 
-@media screen and (min-width: 421px) and (max-width: 699px){
-    label, input, button, span{
-        font-size: 15px;
-    }
+// @media screen and (min-width: 421px) and (max-width: 699px){
+//     label, input, button, span{
+//         font-size: 15px;
+//     }
 
-    h2{
-        font-size: 21px;
-    }
+//     h2{
+//         font-size: 21px;
+//     }
 
-    .help-block{
-        padding-left: 261px; 
+//     .help-block{
+//         padding-left: 261px; 
 
-        label{
-            font-size: 12px; 
-        }
-    }
+//         label{
+//             font-size: 12px; 
+//         }
+//     }
 
-    input.ng-invalid.ng-touched{
-        background-position-x: 145px; 
-    }
-}
+//     input.ng-invalid.ng-touched{
+//         background-position-x: 145px; 
+//     }
+// }
 
-@media screen and (min-width: 700px) and (max-width: 999px){
-    label, input, button, span{
-        font-size: 18px;
-    }
+// @media screen and (min-width: 700px) and (max-width: 999px){
+//     label, input, button, span{
+//         font-size: 18px;
+//     }
 
-    h2{
-        font-size: 24px;
-    }
+//     h2{
+//         font-size: 24px;
+//     }
 
-    .help-block{
-        padding-left: 360px; 
+//     .help-block{
+//         padding-left: 360px; 
 
-        label{
-            font-size: 14px; 
-        }
-    }
+//         label{
+//             font-size: 14px; 
+//         }
+//     }
 
-    input.ng-invalid.ng-touched{
-        background-position-x: 215px; 
-    }    
-}
+//     input.ng-invalid.ng-touched{
+//         background-position-x: 215px; 
+//     }    
+// }
 
-@media screen and (min-width: 1000px){
-    label, input, button, span{
-        font-size: 20px;
-    }
+// @media screen and (min-width: 1000px){
+//     label, input, button, span{
+//         font-size: 20px;
+//     }
 
-    h2{
-        font-size: 28px;
-    }
+//     h2{
+//         font-size: 28px;
+//     }
 
-    .help-block{
-        padding-left: 410px; 
+//     .help-block{
+//         padding-left: 410px; 
 
-        label{
-            font-size: 15px; 
-        }
-    }
+//         label{
+//             font-size: 15px; 
+//         }
+//     }
 
-    input.ng-invalid.ng-touched{
-        background-position-x: 250px; 
-    }   
-}
+//     input.ng-invalid.ng-touched{
+//         background-position-x: 250px; 
+//     }   
+// }

@@ -1,7 +1,8 @@
+/*Variables to use in 'app.component.scss'. Mostly made to exercise with the SASS structure*/
 .navbar {
   background: none;
   border: none;
-  color: grey;
+  color: whitesmoke;
   float: right; }
 
 /*# sourceMappingURL=header.component.css.map */

@@ -1,6 +1,8 @@
+@import 'vars.scss';
+
 .navbar {
     background: none;
     border: none;
-    color: grey;
+    color: $mainFontColor;
     float: right;
 }

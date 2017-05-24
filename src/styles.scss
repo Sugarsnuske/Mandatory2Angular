@@ -1,85 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'app/style/scss/vars.scss';
 
+
 body{
-    background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
-    //background-color: cornflowerblue;
-    //background-color: $mainBgColor;
+    // background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
+    // background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/K%C3%B8benhavns_Erhvervsakademi.JPG/1280px-K%C3%B8benhavns_Erhvervsakademi.JPG);
+    // background-image: url(https://business.bmcdn.dk/media/cache/resolve/image_960x545/image/11/119717/7930949-kea.jpg);
+    background-image: url(http://pantherpipeline.net/wp-content/themes/MaxiNews/images/background/blured-bg-5.png);
+    // background-color: $mainColor;
+    // background-color: $mainBgColor;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 /*Media Queries*/
-@media screen and (max-width: 320px){
-    .internship-container{
-        width: 280px;
+// @media screen and (max-width: 320px){
+//     .internship-container{
+//         // width: 280px;
+//         h1{
+//             font-size: 12px;
+//         }            
 
-        h1{
-            font-size: 12px;
-        }            
+//         h2{
+//             font-size: 8px;
+//         }
+//     }
+// }
 
-        h2{
-            font-size: 8px;
-        }
-    }
-}
+// @media screen and (min-width: 321px) and (max-width: 420px){
+//     .internship-container{
+//         // width: 390px;
+//         h1{
+//             font-size: 16px;
+//         }            
 
-@media screen and (min-width: 321px) and (max-width: 420px){
-    .internship-container{
-        width: 390px;
+//         h2{
+//             font-size: 11px;
+//         }
+//     }
+// }
 
-        h1{
-            font-size: 16px;
-        }            
+// @media screen and (min-width: 421px) and (max-width: 699px){
+//     .internship-container{
+//         // width: 600px;
+//         h1{
+//             font-size: 20px;
+//         }            
 
-        h2{
-            font-size: 11px;
-        }
-    }
-}
+//         h2{
+//             font-size: 14px;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 421px) and (max-width: 699px){
-    .internship-container{
-        
-        width: 600px;
+// @media screen and (min-width: 700px) and (max-width: 999px){
+//     .internship-container{
+//         // width: 800px;
+//         h1{
+//             font-size: 24px;
+//         }            
 
-        h1{
-            font-size: 20px;
-        }            
+//         h2{
+//             font-size: 18px;
+//         }
+//     }
+// }
 
-        h2{
-            font-size: 14px;
-        }
-    }
-}
+// @media screen and (min-width: 1000px){
+//     .internship-container{
+//         // width: 900px;
+//         h1{
+//             font-size: 30px;
+//         }            
 
-@media screen and (min-width: 700px) and (max-width: 999px){
-    .internship-container{
-        
-        width: 800px;
-
-        h1{
-            font-size: 24px;
-        }            
-
-        h2{
-            font-size: 18px;
-        }
-    }
-}
-
-@media screen and (min-width: 1000px){
-    .internship-container{
-        
-        width: 900px;
-
-        h1{
-            font-size: 30px;
-        }            
-
-        h2{
-            font-size: 22px;
-        }
-    }
-}
+//         h2{
+//             font-size: 22px;
+//         }
+//     }
+// }

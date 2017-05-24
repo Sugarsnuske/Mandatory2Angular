@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,OAAQ;EACJ,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,KAAK",
-"sources": ["../scss/header.component.scss"],
+"mappings": "AAAA,6FAA6F;ACE7F,OAAQ;EACJ,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,IAAI;EACZ,KAAK,EDWO,UAAU;ECVtB,KAAK,EAAE,KAAK",
+"sources": ["../scss/vars.scss","../scss/header.component.scss"],
 "names": [],
 "file": "header.component.css"
 }

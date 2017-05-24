@@ -1,168 +1,195 @@
 <!DOCTYPE html>
 <html>
-<!-- #f="ngForm" makes it possible to get the javascript-Object of the form values -->
+  <body>
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    width="200.000000pt" height="74.000000pt" viewBox="0 0 200.000000 74.000000"
+    preserveAspectRatio="xMidYMid meet">
+        <metadata>
+        Created by potrace 1.14, written by Peter Selinger 2001-2017
+        </metadata>
+        <g transform="translate(0.000000,74.000000) scale(0.100000,-0.100000)"
+            fill="#000000" stroke="none">
+            <path d="M0 490 l0 -250 48 0 c45 0 50 3 145 91 87 81 99 90 115 78 9 -8 59
+            -49 110 -91 l93 -78 65 0 c35 0 64 2 64 4 0 2 -64 57 -141 122 l-142 118 132
+            128 131 128 -62 0 -63 -1 -200 -190 -200 -191 -3 191 -2 191 -45 0 -45 0 0
+            -250z"/>
+            <path d="M808 730 c-56 -17 -97 -51 -120 -98 -19 -39 -23 -63 -23 -142 0 -122
+            24 -177 93 -218 47 -27 47 -27 275 -30 l227 -3 0 45 0 45 -226 3 -226 3 -24
+            28 c-46 54 -43 55 184 59 230 3 249 8 289 67 28 41 31 125 8 175 -30 62 -59
+            71 -255 73 -96 1 -187 -2 -202 -7z m342 -83 c33 -11 35 -15 38 -59 5 -75 -5
+            -78 -240 -78 -192 0 -198 1 -198 20 0 29 24 82 44 99 9 8 34 18 54 22 61 11
+            264 9 302 -4z"/>
+            <path d="M1412 698 l3 -43 218 -5 219 -5 29 -33 c16 -18 27 -37 24 -42 -4 -6
+            -91 -10 -208 -10 -233 0 -270 -9 -300 -73 -23 -48 -22 -134 3 -174 40 -66 46
+            -68 338 -71 l264 -3 -4 178 c-3 167 -5 181 -28 223 -17 30 -40 53 -70 70 -44
+            24 -51 25 -268 28 l-223 3 3 -43z m496 -295 l3 -73 -201 0 c-120 0 -209 4
+            -221 10 -14 8 -19 21 -19 53 0 23 4 48 9 55 15 24 71 30 251 29 l175 -2 3 -72z"/>
+        </g>
+    </svg>
+    <div class="container">
+    <!-- #f="ngForm" makes it possible to get the javascript-Object of the form values -->
+      <form (ngSubmit)="onSubmitInternshipForm()" [formGroup]="internForm" >
+            <h1>Create New Internship Report</h1>
+            <h1 *ngIf="internCreated" class="">New Intern is created</h1>
+            <!-- Initials -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="initials">Initials *</label>
+          <input type="text" 
+            id="initials" 
+            class="form-control flex-item" 
+            formControlName="initials">
+        </div>
+            
+        <!-- Validation for "Initials" -->
+        <div class="help-block" *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">
+          <label class="requiredValidator">Please enter your initials!</label>
+        </div>
 
-  <form (ngSubmit)="onSubmitInternshipForm()" [formGroup]="internForm" >
-        <h2>New Internship Report</h2>
-        <h1 *ngIf="internCreated" class="">NEW INTERN IS CREATED</h1>
-        <!-- Initials -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="initials">Initials *</label>
-      <input type="text" 
-        id="initials" 
-        class="form-control flex-item" 
-        formControlName="initials">
+        <!-- Student Name -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="name">Student Name *</label>
+          <input 
+            type="text" 
+            id="name" 
+            class="form-control flex-item"
+            formControlName="name">
+        </div>
+
+        <!-- Validation for "Student Name" -->
+        <div class="help-block" *ngIf="!internForm.get('name').valid && internForm.get('name').touched">
+          <label class="requiredValidator">Please enter the Student's Name!</label>
+        </div>
+
+        <!-- "Suggest Teacher" and "Suggest All" buttons -->
+        <div class="flex-container">
+          <button class="btn btn-info flex-item" type="button" (click)="onSuggestTeacher()">Suggest Teacher</button>
+          <button class="btn btn-default flex-item" type="button" (click)="onSuggestAll()">Suggest All</button>
+        </div>
+
+        <!-- Visit Date -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="visitDate">Visit Date *</label>
+          <input 
+            type="date" 
+            id="visitDate" 
+            class="form-control flex-item"
+            formControlName="visitDate">
+        </div>
+
+        <!-- Validation for "Visit Date" -->
+        <div class="help-block" *ngIf="!internForm.get('visitDate').valid && internForm.get('visitDate').touched">
+          <label class="requiredValidator">Please enter the date of the visit!</label>
+        </div>
+
+        <!-- ID of Internship -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="IDOfInternship">ID of Internship *</label>
+          <input 
+            type="text" 
+            id="IDOfInternship" 
+            class="form-control flex-item"
+            formControlName="IDOfInternship">
+        </div>
+
+        <!-- Validation for "ID of Internship" -->
+        <div class="help-block" *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">
+          <label class="requiredValidator">Please enter the ID!</label>
+        </div>
+
+        <!-- Company Name -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="companyName">Company Name *</label>
+          <input 
+            type="text" 
+            id="companyName" 
+            class="form-control flex-item"
+            formControlName="companyName">
+        </div>
+
+        <!-- Validation for "Company Name" -->
+        <div class="help-block" *ngIf="!internForm.get('companyName').valid && internForm.get('companyName').touched" >
+          <label class="requiredValidator">Please enter the Company Name!</label>
+        </div>
+
+        <!-- Company Contact Person -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="companyPerson">Company Contact Person</label>
+          <input 
+            type="text" 
+            id="companyPerson" 
+            class="form-control flex-item"
+            formControlName="companyPerson">
+        </div>
+
+        <!-- Company Trends -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="companyTrends">Company Trends</label>
+          <input 
+            type="text" 
+            id="companyTrends" 
+            class="form-control flex-item"
+            formControlName="companyTrends">
+        </div>
+
+        <!-- Company Qualification -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="companyQualification">Company Qualification</label>
+          <input 
+            type="text" 
+            id="companyQualification" 
+            class="form-control flex-item"
+            formControlName="companyQualification">
+        </div>
+
+        <!-- Student Qualification -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="studentQuialification">Student Qualification</label>
+          <input 
+            type="text" 
+            id="studentQualification" 
+            class="form-control flex-item"
+            formControlName="studentQualification">
+        </div>
+
+        <!-- Cooperation -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="cooperation">Cooperation</label>
+          <input 
+            type="text" 
+            id="cooperation" 
+            class="form-control flex-item"
+            formControlName="cooperation">
+        </div>
+
+        <!-- Miscellaneous -->
+        <div class="form-group flex-container">
+          <label class="flex-item" for="miscellaneous">Miscellaneous</label>
+          <textarea 
+            rows="5" 
+            id="miscellaneous" 
+            class="form-control flex-item"
+            formControlName="miscellaneous">
+          </textarea>
+        </div>
+
+        <!-- Required fields label -->
+        <label class="required-star">* Required fields</label>
+
+        <div class="help-block" *ngIf="!internForm.valid && internForm.touched" >
+          <label>Please enter valid information:</label>
+          <label *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">Initials</label>
+          <label *ngIf="!internForm.get('name').valid && internForm.get('name').touched">Name</label>
+          <label *ngIf="!internForm.get('visitDate').valid && internForm.get('visitDate').touched">Visit Date</label>
+          <label *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">IDOfInternship</label>
+          <label *ngIf="!internForm.get('companyName').valid && internForm.get('companyName').touched">Company Name</label>
+        </div>
+
+        <!-- Add Internship Report button -->
+        <div class="flex-container">
+          <button class="btn btn-primary flex-item" type="submit" [disabled]="!internForm.valid"><span>Internship Report</span></button>
+        </div>
+
+      </form>
     </div>
-        
-    <!-- Validation for "Initials" -->
-    <div class="help-block" *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">
-      <label class="requiredValidator">Please enter your initials!</label>
-    </div>
-
-    <!-- Student Name -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="name">Student Name *</label>
-      <input 
-        type="text" 
-        id="name" 
-        class="form-control flex-item"
-        formControlName="name">
-    </div>
-
-    <!-- Validation for "Student Name" -->
-    <div class="help-block" *ngIf="!internForm.get('name').valid && internForm.get('name').touched">
-      <label class="requiredValidator">Please enter the Student's Name!</label>
-    </div>
-
-    <!-- "Suggest Teacher" and "Suggest All" buttons -->
-    <div class="flex-container">
-      <button class="btn btn-info flex-item" type="button" (click)="onSuggestTeacher()">Suggest Teacher</button>
-      <button class="btn btn-default flex-item" type="button" (click)="onSuggestAll()">Suggest All</button>
-    </div>
-
-    <!-- Visit Date -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="visitDate">Visit Date *</label>
-      <input 
-        type="date" 
-        id="visitDate" 
-        class="form-control flex-item"
-        formControlName="visitDate">
-    </div>
-
-    <!-- Validation for "Visit Date" -->
-    <div class="help-block" *ngIf="!internForm.get('visitDate').valid && internForm.get('visitDate').touched">
-      <label class="requiredValidator">Please enter the date of the visit!</label>
-    </div>
-
-    <!-- ID of Internship -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="IDOfInternship">ID of Internship *</label>
-      <input 
-        type="text" 
-        id="IDOfInternship" 
-        class="form-control flex-item"
-        formControlName="IDOfInternship">
-    </div>
-
-    <!-- Validation for "ID of Internship" -->
-    <div class="help-block" *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">
-      <label class="requiredValidator">Please enter the ID!</label>
-    </div>
-
-    <!-- Company Name -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="companyName">Company Name *</label>
-      <input 
-        type="text" 
-        id="companyName" 
-        class="form-control flex-item"
-        formControlName="companyName">
-    </div>
-
-    <!-- Validation for "Company Name" -->
-    <div class="help-block" *ngIf="!internForm.get('companyName').valid && internForm.get('companyName').touched" >
-      <label class="requiredValidator">Please enter the Company Name!</label>
-    </div>
-
-    <!-- Company Contact Person -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="companyPerson">Company Contact Person</label>
-      <input 
-        type="text" 
-        id="companyPerson" 
-        class="form-control flex-item"
-        formControlName="companyPerson">
-    </div>
-
-    <!-- Company Trends -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="companyTrends">Company Trends</label>
-      <input 
-        type="text" 
-        id="companyTrends" 
-        class="form-control flex-item"
-        formControlName="companyTrends">
-    </div>
-
-    <!-- Company Qualification -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="companyQualification">Company Qualification</label>
-      <input 
-        type="text" 
-        id="companyQualification" 
-        class="form-control flex-item"
-        formControlName="companyQualification">
-    </div>
-
-    <!-- Student Qualification -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="studentQuialification">Student Qualification</label>
-      <input 
-        type="text" 
-        id="studentQualification" 
-        class="form-control flex-item"
-        formControlName="studentQualification">
-    </div>
-
-    <!-- Cooperation -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="cooperation">Cooperation</label>
-      <input 
-        type="text" 
-        id="cooperation" 
-        class="form-control flex-item"
-        formControlName="cooperation">
-    </div>
-
-    <!-- Miscellaneous -->
-    <div class="form-group flex-container">
-      <label class="flex-item" for="miscellaneous">Miscellaneous</label>
-      <textarea 
-        rows="5" 
-        id="miscellaneous" 
-        class="form-control flex-item"
-        formControlName="miscellaneous">
-      </textarea>
-    </div>
-
-    <!-- Required fields label -->
-    <label class="required-star">* Required fields</label>
-
-    <div class="help-block" *ngIf="!internForm.valid && internForm.touched" >
-      <label>Please enter valid information:</label>
-      <label *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">Initials</label>
-      <label *ngIf="!internForm.get('name').valid && internForm.get('name').touched">Name</label>
-      <label *ngIf="!internForm.get('visitDate').valid && internForm.get('visitDate').touched">Visit Date</label>
-      <label *ngIf="!internForm.get('IDOfInternship').valid && internForm.get('IDOfInternship').touched">IDOfInternship</label>
-      <label *ngIf="!internForm.get('companyName').valid && internForm.get('companyName').touched">Company Name</label>
-    </div>
-
-    <!-- Add Internship Report button -->
-    <div class="flex-container">
-      <button class="btn btn-primary flex-item" type="submit" [disabled]="!internForm.valid"><span>Internship Report</span></button>
-    </div>
-
-  </form>
-
+  </body>
 </html> 

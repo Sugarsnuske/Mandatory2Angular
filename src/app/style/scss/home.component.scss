@@ -1,20 +1,40 @@
 @import 'vars.scss';
 @import 'mixins.scss';
 
-.jumbotron{
-    // background-color: $containerBGColor1;
-    background: none;
-    border-radius: 10px;
-}
-
-.jumbotron h1, .jumbotron h2{
-    @include h1FontStack($family: 'Lato', $weight: '400', $size: '30px');
+h1{
+    @include h1FontStack($family: 'Lato', $weight: '400', $font-size: '30px');
     text-align: center;
     margin: 5px 0px;
     padding: 7px 0px;
     color: $h1Color;
 }
 
-// .jumbotron h2{
-//      color: $internshipHeadingColor;
-// }
+h2{
+    @include h2FontStack($family: 'Lato', $weight: '400', $font-size: '15px');
+    text-align: center;
+    margin: 5px 0px;
+    padding: 7px 0px;
+    color: $mainFontColor;
+}
+
+svg {
+    width: 200px;
+    height: 74px;
+    transform: translate(25px, 25px);
+
+    stroke-dasharray: 20;
+    animation: dash 10s infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+img {
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
