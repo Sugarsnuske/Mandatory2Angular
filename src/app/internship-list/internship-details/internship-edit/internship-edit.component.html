@@ -6,7 +6,7 @@
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Edit Report for {{ intern?.data?.name }}</h4>
+            <h3 class="modal-title">Edit Report for {{ intern?.data?.name }}</h3>
         </div>
         <div class="modal-body">
             <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
@@ -64,7 +64,7 @@
 
                 <div class="form-group">
                     <label for="miscellaneous">Miscellaneous</label>
-                    <textarea rows="5" name="miscellaneous" class="form-control" [(ngModel)]="internshipToBeUpdated[10]"></textarea>
+                    <textarea rows="5" name="miscellaneous" class="form-control textarea" [(ngModel)]="internshipToBeUpdated[10]"></textarea>
                 </div>
             </form>
         </div>

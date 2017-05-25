@@ -30,7 +30,7 @@ form{
 h1{
     color: $createh1Color;
     font-family: $headerFontFamily;
-    font-size: $h1FontSize;
+    // font-size: $h1FontSize;
     font-weight: $fontWeight;
     text-align: center;
     margin-bottom: 4%;
@@ -39,7 +39,7 @@ h1{
 
 button, input, label{
     font-family: $bodyFontFamily;
-    font-size: $bodyFontSize;
+    // font-size: $bodyFontSize;
     font-weight: $fontWeight;
     text-decoration: none;
     margin: 0px 5px; 
@@ -59,7 +59,7 @@ button[type=submit]:disabled{
 }
 
 label{
-    font-size: 18px;
+    // font-size: 18px;
     display: block;
     margin-bottom: 5px;
     color: $labelColor;
@@ -97,7 +97,7 @@ input.ng-invalid.ng-touched{
     color: $dangerColor;
     text-decoration: none;
     font-family: $bodyFontFamily;
-    font-size: $bodyFontSize;
+    // font-size: $bodyFontSize;
     font-weight: $fontWeight;
 }
 
@@ -108,7 +108,7 @@ input.ng-invalid.ng-touched{
 
     label{
         font-family: $bodyFontFamily;
-        font-size: $bodyFontSize;
+        // font-size: $bodyFontSize;
         font-weight: $fontWeight;
     }
 }
@@ -116,14 +116,14 @@ input.ng-invalid.ng-touched{
 .required-star {
     color: $dangerColor;
     font-family: $bodyFontFamily;
-    font-size: $bodyFontSize;
+    // font-size: $bodyFontSize;
     font-weight: $fontWeight;
 }
 
 .internCreated {
     color: $successColor;
     font-family: $bodyFontFamily;
-    font-size: $h2FontSize;
+    // font-size: $h2FontSize;
     font-weight: $fontWeight;
     text-align: center;
     margin-bottom: 4%;

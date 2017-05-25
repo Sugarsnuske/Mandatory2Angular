@@ -7,7 +7,7 @@ h1{
     padding: 7px 0px;
     color: $h1Color;
     font-family: $headerFontFamily;
-    font-size: $welcomeFontSize;
+    // font-size: $h1FontSize;
     font-weight: $fontWeight;
 }
 
@@ -17,13 +17,11 @@ h2{
     padding: 7px 0px;
     color: $mainFontColor;
     font-family: $bodyFontFamily;
-    font-size: $h2FontSize;
+    // font-size: $h2FontSize;
     font-weight: $fontWeight;
 }
 
 svg {
-    width: 200px;
-    height: 74px;
     transform: translate(25px, 25px);
 
     stroke-dasharray: 20;
@@ -53,14 +51,15 @@ The higher the number, the more space in between dashes in the stroke.*/
 .photo-overlay {
     color: #ffffff;
 	position: absolute;
-	height: 90px; //Only shows a block
-	top: 80%;
-	right: 27.5%;
+	// height: 90px; //Only shows a block //See media queries
 	bottom: 0; 
-	left: 27.5%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
 
     font-family: $bodyFontFamily;
-    font-size: $bodyFontSize;
+    // font-size: $bodyFontSize;
     font-weight: $fontWeight;
 
 	display: flex;
@@ -84,4 +83,3 @@ The higher the number, the more space in between dashes in the stroke.*/
         color: white;
     }
 }
-

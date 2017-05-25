@@ -1,9 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
 body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
 /*Media Queries*/
+/* Smartphones */
+@media only screen and (min-width: 320px) {
+  body h1 {
+    font-size: 20px; }
+  body h2 {
+    font-size: 15px; }
+  body h3 {
+    font-size: 12px; }
+  body p, body label, body a, body input[type=text], body input[type=date], body .textarea {
+    font-size: 10px; }
+  body svg {
+    width: 100px;
+    height: 50px; }
+  body img {
+    width: 80%;
+    height: 80%; }
+  body .photo-overlay {
+    width: 80%;
+    height: 60px; }
+  body #search-bar {
+    width: 140px; }
+  body .modal-content {
+    width: 80%; } }
+/* iPads */
+@media only screen and (min-width: 768px) {
+  body h1 {
+    font-size: 30px; }
+  body h2 {
+    font-size: 18px; }
+  body h3 {
+    font-size: 15px; }
+  body p, body label, body a, body input[type=text], body input[type=date], body .textarea {
+    font-size: 12px; }
+  body svg {
+    width: 150px;
+    height: 60px; }
+  body img {
+    width: 80%;
+    height: 80%; }
+  body .photo-overlay {
+    width: 80%;
+    height: 75px; }
+  body #search-bar {
+    width: 160px; }
+  body .modal-content {
+    width: 90%; } }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  body h1 {
+    font-size: 35px; }
+  body h2 {
+    font-size: 20px; }
+  body h3 {
+    font-size: 18px; }
+  body p, body label, body a, body input[type=text], body input[type=date], body .textarea {
+    font-size: 15px; }
+  body svg {
+    width: 200px;
+    height: 75px; }
+  body img {
+    width: 960px;
+    height: 545px; }
+  body .photo-overlay {
+    width: 960px;
+    height: 90px; }
+  body #search-bar {
+    width: 190px; }
+  body .modal-content {
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

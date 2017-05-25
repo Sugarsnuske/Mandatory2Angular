@@ -1,6 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
 @import 'app/style/scss/vars.scss';
-
 
 body{
     // background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
@@ -11,67 +9,113 @@ body{
 }
 
 /*Media Queries*/
-// @media screen and (max-width: 320px){
-//     .internship-container{
-//         // width: 280px;
-//         h1{
-//             font-size: 12px;
-//         }            
+/* Smartphones */
+@media only screen and (min-width : 320px) {
+    body {
+        h1{
+            // background-color:red; //For testing
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 15px;
+        }
+        h3 {
+            font-size: 12px;
+        }
+        p, label, a, input[type=text], input[type=date], .textarea {
+            font-size: 10px;
+        }
+        svg {
+            width: 100px;
+            height: 50px;
+        }
+        img{
+            width: 80%;
+            height: 80%;
+        }
+        .photo-overlay{
+            width: 80%;
+            height: 60px;
+        }
+        #search-bar {
+            width: 140px;
+        }
+        .modal-content {
+            width: 80%;
+        }
+    }
+}
 
-//         h2{
-//             font-size: 8px;
-//         }
-//     }
-// }
+/* iPads */
+@media only screen and (min-width : 768px) {
+    body {
+        h1{
+            // background-color: blue; //For testing
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 15px;
+        }
+        p, label, a, input[type=text], input[type=date], .textarea {
+            font-size: 12px;
+        }
+        svg {
+            width: 150px;
+            height: 60px;
+        }
+        img{
+            width: 80%;
+            height: 80%;
+        }
+        .photo-overlay{
+            width: 80%;
+            height: 75px;
+        }
+        #search-bar {
+            width: 160px;
+        }
+        .modal-content {
+            width: 90%;
+        }
+    }
+}
 
-// @media screen and (min-width: 321px) and (max-width: 420px){
-//     .internship-container{
-//         // width: 390px;
-//         h1{
-//             font-size: 16px;
-//         }            
-
-//         h2{
-//             font-size: 11px;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 421px) and (max-width: 699px){
-//     .internship-container{
-//         // width: 600px;
-//         h1{
-//             font-size: 20px;
-//         }            
-
-//         h2{
-//             font-size: 14px;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 700px) and (max-width: 999px){
-//     .internship-container{
-//         // width: 800px;
-//         h1{
-//             font-size: 24px;
-//         }            
-
-//         h2{
-//             font-size: 18px;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1000px){
-//     .internship-container{
-//         // width: 900px;
-//         h1{
-//             font-size: 30px;
-//         }            
-
-//         h2{
-//             font-size: 22px;
-//         }
-//     }
-// }
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    body {
+        h1{
+            // background-color: green; //For testing
+            font-size: 35px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        p, label, a, input[type=text], input[type=date], .textarea {
+            font-size: 15px;
+        }
+        svg {
+            width: 200px;
+            height: 75px;
+        }
+        img{
+            width: 960px;
+            height: 545px;
+        }
+        .photo-overlay{
+            width: 960px;
+            height: 90px;
+        }
+        #search-bar {
+            width: 190px;
+        }
+        .modal-content {
+            width: 100%;
+        }
+    }
+}
