@@ -50,7 +50,7 @@ body {
     width: 160px; }
   body .modal-content {
     width: 90%; } }
-/* Desktops and laptops ----------- */
+/* Desktops and laptops */
 @media only screen and (min-width: 1224px) {
   body h1 {
     font-size: 35px; }

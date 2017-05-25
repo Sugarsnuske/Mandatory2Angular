@@ -9,15 +9,12 @@
   /*border: 1px solid black; /*Only for testing. Will be removed/deleted when done*/ }
 
 .container {
-  width: 850px;
   margin: 0 auto;
   margin-top: 50px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 7px; }
 
 svg {
-  width: 200px;
-  height: 74px;
   transform: translate(25px, 25px); }
 
 form {
@@ -25,7 +22,7 @@ form {
   margin: 20px; }
 
 h1 {
-  color: #fff;
+  color: whitesmoke;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -42,9 +39,6 @@ button, input {
   border-radius: 5px;
   box-shadow: none; }
 
-button {
-  cursor: pointer; }
-
 button[type=submit]:disabled {
   cursor: default; }
 
@@ -55,15 +49,20 @@ label {
   font-family: "Lato", sans-serif;
   font-weight: 400; }
 
+input {
+  width: 100px; }
+
 /*Divs - Containers*/
 .flex-container {
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
   margin: 5px 5px;
   padding: 5px 5px; }
 
 .flex-item {
-  width: 40%; }
+  width: 25%; }
 
 input.ng-invalid.ng-touched {
   border-color: #d8000c;
@@ -72,7 +71,7 @@ input.ng-invalid.ng-touched {
   background-repeat: no-repeat;
   background-position: right;
   background-color: white;
-  background-position-x: 250px; }
+  background-position-x: 230px; }
 
 .requiredValidator {
   color: #d8000c;
@@ -106,9 +105,6 @@ input.ng-invalid.ng-touched {
 .btn-default:active {
   transform: translateX(4px); }
 
-.btn-primary:active {
-  transform: translateX(4px); }
-
 .btn-primary span {
   cursor: pointer;
   display: inline-block;
@@ -126,7 +122,5 @@ input.ng-invalid.ng-touched {
     .btn-primary span:hover:after {
       opacity: 1;
       right: 0; }
-
-/*Media Queries*/
 
 /*# sourceMappingURL=internship-new.component.css.map */

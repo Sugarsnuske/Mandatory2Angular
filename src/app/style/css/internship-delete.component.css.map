@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACQ,qEAA6D;AAErE,EAAG;EACC,KAAK,ECCQ,IAAI;EDAjB,WAAW,ECkBE,kBAAkB;EDhB/B,WAAW,ECqBF,GAAG;;ADlBhB,CAAE;EACE,KAAK,ECNQ,IAAI;EDOjB,WAAW,ECWE,kBAAkB;EDT/B,WAAW,ECcF,GAAG;;ADXhB,aAAc;EACV,gBAAgB,ECCJ,OAAO",
+"mappings": "AACQ,qEAA6D;AAErE,EAAG;EACC,KAAK,ECCQ,IAAI;EDAjB,WAAW,ECkBE,kBAAkB;EDjB/B,WAAW,ECsBF,GAAG;;ADnBhB,CAAE;EACE,KAAK,ECLQ,IAAI;EDMjB,WAAW,ECYE,kBAAkB;EDX/B,WAAW,ECgBF,GAAG;;ADbhB,aAAc;EACV,gBAAgB,ECGJ,OAAO",
 "sources": ["../scss/internship-delete.component.scss","../scss/vars.scss"],
 "names": [],
 "file": "internship-delete.component.css"
