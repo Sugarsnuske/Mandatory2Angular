@@ -60,12 +60,6 @@
           <label class="requiredValidator">Please enter the Student's Name!</label>
         </div>
 
-        <!-- "Suggest Teacher" and "Suggest All" buttons -->
-        <div class="flex-container">
-          <button class="btn btn-info flex-item" type="button" (click)="onSuggestTeacher()">Suggest Teacher</button>
-          <button class="btn btn-default flex-item" type="button" (click)="onSuggestAll()">Suggest All</button>
-        </div>
-
         <!-- Visit Date -->
         <div class="form-group flex-container">
           <label class="flex-item" for="visitDate">Visit Date *</label>
@@ -170,6 +164,12 @@
             class="form-control flex-item"
             formControlName="miscellaneous">
           </textarea>
+        </div>
+
+        <!-- "Suggest Teacher" and "Suggest All" buttons -->
+        <div class="flex-container">
+          <button class="btn btn-info flex-item" type="button" (click)="onSuggestTeacher()">Suggest Teacher</button>
+          <button class="btn btn-default flex-item" type="button" (click)="onSuggestAll()">Suggest All</button>
         </div>
 
         <!-- Required fields label -->
