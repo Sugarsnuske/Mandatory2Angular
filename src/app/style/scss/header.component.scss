@@ -1,8 +1,13 @@
 @import 'vars.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 
 .navbar {
     background: none;
     border: none;
     color: $mainFontColor;
     float: right;
+
+    font-family: $bodyFontFamily;
+    font-size: $bodyFontSize;
+    font-weight: $fontWeight;
 }

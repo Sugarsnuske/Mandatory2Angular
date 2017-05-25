@@ -1,0 +1,9 @@
+@import 'vars.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
+h2 {
+    color: $popUpFontColor;
+    font-family: $bodyFontFamily;
+    font-size: $h4FontSize;
+    font-weight: $fontWeight;
+}

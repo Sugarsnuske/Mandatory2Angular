@@ -1,16 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
 h4 {
-  color: black;
+  color: #000;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
-  font-family: 'Verdana';
   font-weight: 400; }
 
 p {
-  color: black;
+  color: #000;
+  font-family: "Lato", sans-serif;
   font-size: 15px;
-  font-family: 'Verdana';
   font-weight: 400; }
 
 .modal-header {
-  background-color: #FFBABA; }
+  background-color: #ffbaba; }
 
 /*# sourceMappingURL=internship-delete.component.css.map */

@@ -1,12 +1,11 @@
 @import 'vars.scss';
-@import 'mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 
 a {
-    // @include pFontStack($family: 'Verdana', $weight: '400', $font-size: '12px');
     color: $labelColor;
-    font-size: 15px;
-    font-family: 'Verdana';
-    font-weight: 400;
+    font-family: $bodyFontFamily;
+    font-size: $bodyFontSize;
+    font-weight: $fontWeight;
 
     &:hover{
         color: $labelColor;
@@ -15,30 +14,30 @@ a {
 }
 
 h1 {
-    // @include h1FontStack($family: 'Verdana', $weight: '400', $font-size: '30px');
     color: $h1Color;
     text-align: center;
-    font-size: 40px;
-    font-family: 'Verdana';
-    font-weight: 400;
+    font-family: $headerFontFamily;
+    font-size: $h1FontSize;
+    font-weight: $fontWeight;
 }
 
 h2 {
-    // @include h2FontStack($family: 'Verdana', $weight: '400', $font-size: '15px');
     color: $mainFontColor;
     text-align: center;
-    font-size: 20px;
-    font-family: 'Verdana';
-    font-weight: 400;
+    font-family: $bodyFontFamily;
+    font-size: $h2FontSize;
+    font-weight: $fontWeight;
 }
 
 #search-bar {
     float: right;
-    padding:8px 15px;
+    padding: 8px 15px;
     background:rgba(50, 50, 50, 0.2);
     border:0px solid #dbdbdb;
     border-radius: 20px;
-    // margin: -20px;
+    font-family: $bodyFontFamily;
+    font-size: $bodyFontSize;
+    font-weight: $fontWeight;
 }
 
 svg {

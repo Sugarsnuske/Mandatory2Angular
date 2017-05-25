@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
 * {
   margin: 0;
   /*Reset margin*/
@@ -25,17 +26,19 @@ form {
 
 h1 {
   color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 4%;
-  font-size: 35px;
-  font-family: 'Verdana';
-  font-weight: 400; }
+  text-decoration: none; }
 
 button, input, label {
-  margin: 0px 5px;
+  font-family: "Lato", sans-serif;
   font-size: 15px;
-  font-family: 'Verdana';
-  font-weight: 400; }
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0px 5px; }
 
 button, input {
   border-radius: 5px;
@@ -51,7 +54,9 @@ label {
   font-size: 18px;
   display: block;
   margin-bottom: 5px;
-  color: whitesmoke; }
+  color: whitesmoke;
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
 
 /*Divs - Containers*/
 .flex-container {
@@ -64,7 +69,7 @@ label {
   width: 40%; }
 
 input.ng-invalid.ng-touched {
-  border-color: #d72828;
+  border-color: #d8000c;
   background: url(../../../assets/_img/Error-128.png);
   background-size: 20px;
   background-repeat: no-repeat;
@@ -73,26 +78,42 @@ input.ng-invalid.ng-touched {
   background-position-x: 250px; }
 
 .requiredValidator {
-  color: #d72828;
-  text-decoration: none; }
+  color: #d8000c;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400; }
 
 .help-block {
   padding-left: 375px;
   margin-top: -10px;
-  padding-bottom: 10px;
-  font-size: 20px; }
+  padding-bottom: 10px; }
+  .help-block label {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 400; }
 
 .required-star {
-  color: #FFBABA; }
+  color: #d8000c;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400; }
 
 .internCreated {
-  color: green;
-  font-size: 20px; }
+  color: #4f8a10;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4%; }
 
-.btn-info:active {
+.btn-primary:active {
   transform: translateY(4px); }
 
 .btn-default:active {
+  transform: translateX(4px); }
+
+.btn-primary:active {
   transform: translateX(4px); }
 
 .btn-primary span {
@@ -100,24 +121,18 @@ input.ng-invalid.ng-touched {
   display: inline-block;
   position: relative;
   transition: 0.5s; }
-
-.btn-primary span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s; }
-
-.btn-primary:hover span {
-  padding-right: 25px; }
-
-.btn-primary:hover span:after {
-  opacity: 1;
-  right: 0; }
-
-.btn-primary:active {
-  transform: translateX(4px); }
+  .btn-primary span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s; }
+  .btn-primary span:hover {
+    padding-right: 25px; }
+    .btn-primary span:hover:after {
+      opacity: 1;
+      right: 0; }
 
 /*Media Queries*/
 

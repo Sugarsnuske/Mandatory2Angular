@@ -1,26 +1,24 @@
 @import 'vars.scss';
-@import 'mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 
 h1{
-    // @include h1FontStack($family: 'Verdana', $weight: '400', $font-size: '30px');
     text-align: center;
     margin: 5px 0px;
     padding: 7px 0px;
     color: $h1Color;
-    font-family: 'Verdana', 'sans-serif'; //Helvetica
-    font-size: 40px;
-    font-weight: 400;
+    font-family: $headerFontFamily;
+    font-size: $welcomeFontSize;
+    font-weight: $fontWeight;
 }
 
 h2{
-    // @include h2FontStack($family: 'Verdana', $weight: '400', $font-size: '15px');
     text-align: center;
     margin: 5px 0px;
     padding: 7px 0px;
     color: $mainFontColor;
-    font-family: 'Verdana', 'sans-serif'; //Helvetica
-    font-size: 20px;
-    font-weight: 400;
+    font-family: $bodyFontFamily;
+    font-size: $h2FontSize;
+    font-weight: $fontWeight;
 }
 
 svg {
@@ -61,6 +59,10 @@ The higher the number, the more space in between dashes in the stroke.*/
 	bottom: 0; 
 	left: 27.5%;
 
+    font-family: $bodyFontFamily;
+    font-size: $bodyFontSize;
+    font-weight: $fontWeight;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -75,10 +77,7 @@ The higher the number, the more space in between dashes in the stroke.*/
         opacity: 0;
     }
 
-    //h3
-
     p{
-        font-size: 1.3em;
         line-height: 1.25em;
         margin-top: 0em;
         margin-bottom: .5em;

@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
 .navbar {
   background: none;
   border: none;
   color: #676767;
-  float: right; }
+  float: right;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400; }
 
 /*# sourceMappingURL=header.component.css.map */

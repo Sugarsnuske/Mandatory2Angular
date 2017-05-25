@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AACQ,qEAA6D;AAErE,EAAG;EACC,KAAK,ECCQ,IAAI;EDAjB,WAAW,ECkBE,kBAAkB;EDjB/B,SAAS,ECwBA,IAAI;EDvBb,WAAW,EC2BF,GAAG",
+"sources": ["../scss/page-not-found.component.scss","../scss/vars.scss"],
 "names": [],
 "file": "page-not-found.component.css"
 }

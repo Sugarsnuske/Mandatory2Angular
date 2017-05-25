@@ -1,14 +1,35 @@
-//From app.component.vars.scss
-// $mainFontColor: whitesmoke;
-$internshipHeadingColor: lightgrey;
+//Font-colors
+$h1Color: #000;
+$createh1Color: #fff;
+$labelColor: whitesmoke;
+$mainFontColor: #676767;
+$popUpFontColor: #000;
+
+//Font and Button colors
+$infoColor: #00529b;
+$successColor: #4f8a10;
+$warningColor: #9f6000;
+$dangerColor: #d8000c;
+
+//Background colors
 $containerBGColor: rgba(0, 0, 0, 0.7);
 
-//From Style Guide
-$mainColor: #5bdedb;
-$h1Color: #000;
-$mainFontColor: #676767;
-$linkColor: #4a90e2; 
-$mainBgColor: #fff;
+$infoBgColor: #bde5f8;
+$successBgColor: #dff2bf;
+$warningBgColor: #feefb3;
+$dangerBgColor: #ffbaba;
 
-//From internship-new.component.vars.scss
-$labelColor: whitesmoke;
+//Font-families
+$headerFontFamily: 'Open Sans', sans-serif;
+$bodyFontFamily: 'Lato', sans-serif;
+
+//Font-sizes 
+        //Make em's?
+$welcomeFontSize: 40px;
+$h1FontSize: 35px;
+$h2FontSize: 20px;
+$h4FontSize: 18px;
+$bodyFontSize: 15px;
+
+//Font-weights
+$fontWeight: 400;

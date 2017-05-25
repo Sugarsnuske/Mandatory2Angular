@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
 * {
   margin: 0;
   padding: 0;
@@ -9,19 +10,17 @@
 label {
   color: whitesmoke;
   font-weight: bold;
-  font-size: 18px;
-  font-family: 'Verdana'; }
-
-input[type=text], textarea {
-  width: 40%; }
-  input[type=text] a:link, textarea a:link {
-    text-decoration: none; }
+  font-family: "Lato", sans-serif;
+  font-size: 18px; }
 
 input[type=date] {
   width: 40%; }
 
 .isDeleted {
-  color: #FFBABA; }
+  color: #ffbaba;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400; }
 
 /*Keyframes*/
 /*Media Queries*/

@@ -30,7 +30,7 @@
     <!-- #f="ngForm" makes it possible to get the javascript-Object of the form values -->
       <form (ngSubmit)="onSubmitInternshipForm()" [formGroup]="internForm" >
             <h1>Create New Internship Report</h1>
-            <h1 *ngIf="internCreated" class="internCreated">New Internship Report is now created!</h1>
+            <h2 *ngIf="internCreated" class="internCreated">New Internship Report is now created!</h2>
             <!-- Initials -->
         <div class="form-group flex-container">
           <label class="flex-item" for="initials">Initials *</label>
@@ -169,11 +169,8 @@
         <!-- "Suggest Teacher" and "Suggest All" buttons -->
         <div class="flex-container">
           <!--<button class="btn btn-info flex-item" type="button" (click)="onSuggestTeacher()">Suggest Teacher</button>-->
-          <button class="btn btn-info flex-item" type="button" (click)="onSuggestAll()">Suggest All</button>
+          <button class="btn btn-default flex-item" type="button" (click)="onSuggestAll()">Suggest All</button>
         </div>
-
-        <!-- Required fields label -->
-        <!--<label class="required-star">* Required fields</label>-->
 
         <div class="help-block" *ngIf="!internForm.valid && internForm.touched" >
           <label class="required-star">* Please enter valid information:</label>

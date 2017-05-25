@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,EAAG;EACC,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,SAAS;EACtB,WAAW,EAAE,GAAG;;AAGpB,KAAM;EACF,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,SAAS;EACtB,WAAW,EAAE,GAAG",
-"sources": ["../scss/internship-edit.component.scss"],
+"mappings": "AACQ,qEAA6D;AAErE,EAAG;EACC,KAAK,ECCQ,IAAI;EDAjB,WAAW,ECkBE,kBAAkB;EDjB/B,SAAS,ECwBA,IAAI;EDvBb,WAAW,EC2BF,GAAG;;ADxBhB,KAAM;EACF,KAAK,ECNQ,IAAI;EDOjB,WAAW,ECWE,kBAAkB;EDV/B,SAAS,ECkBE,IAAI;EDjBf,WAAW,ECoBF,GAAG;;ADjBhB,aAAc;EACV,gBAAgB,ECFN,OAAO",
+"sources": ["../scss/internship-edit.component.scss","../scss/vars.scss"],
 "names": [],
 "file": "internship-edit.component.css"
 }
