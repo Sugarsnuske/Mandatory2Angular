@@ -55,9 +55,7 @@ input {
 
 /*Divs - Containers*/
 .flex-container {
-  display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
   justify-content: center;
   margin: 5px 5px;
   padding: 5px 5px; }
@@ -72,7 +70,7 @@ input.ng-invalid.ng-touched {
   background-repeat: no-repeat;
   background-position: right;
   background-color: white;
-  background-position-x: 230px; }
+  background-position-x: 98%; }
 
 .requiredValidator {
   color: #d8000c;
@@ -81,12 +79,15 @@ input.ng-invalid.ng-touched {
   font-weight: 400; }
 
 .help-block {
-  padding-left: 375px;
   margin-top: -10px;
   padding-bottom: 10px; }
   .help-block label {
     font-family: "Lato", sans-serif;
     font-weight: 400; }
+
+.help-block-2 label {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
 
 .required-star {
   color: #d8000c;

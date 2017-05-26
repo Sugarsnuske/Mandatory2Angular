@@ -27,7 +27,9 @@ body {
   body #search-bar {
     width: 140px; }
   body .modal-content {
-    width: 80%; } }
+    width: 80%; }
+  body .help-block {
+    padding-left: 330px; } }
 /* iPads */
 @media only screen and (min-width: 768px) {
   body h1 {
@@ -50,7 +52,9 @@ body {
   body #search-bar {
     width: 160px; }
   body .modal-content {
-    width: 90%; } }
+    width: 90%; }
+  body .help-block {
+    padding-left: 430px; } }
 /* Desktops and laptops */
 @media only screen and (min-width: 1224px) {
   body h1 {
@@ -75,6 +79,8 @@ body {
   body #search-bar {
     width: 190px; }
   body .modal-content {
-    width: 100%; } }
+    width: 100%; }
+  body .help-block {
+    padding-left: 530px; } }
 
 /*# sourceMappingURL=styles.css.map */

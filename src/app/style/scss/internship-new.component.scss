@@ -65,9 +65,9 @@ input {
 
 /*Divs - Containers*/
 .flex-container{
-    display: -webkit-flex;
+    // display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: center;
+    // -webkit-justify-content: center;
     justify-content: center;
     margin: 5px 5px;
     padding: 5px 5px; 
@@ -85,7 +85,7 @@ input.ng-invalid.ng-touched{
     background-repeat: no-repeat;
     background-position: right;
     background-color: white;
-    background-position-x: 230px; //Media Query Dependent
+    background-position-x: 98%;
 }
 
 //Red text when input is invalid
@@ -94,12 +94,23 @@ input.ng-invalid.ng-touched{
     text-decoration: none;
     font-family: $bodyFontFamily;
     font-weight: $fontWeight;
+    // text-align: center;
 }
 
 .help-block{
-    padding-left: 375px; //Media Query Dependent
+    // padding-left: 530px; //Media Query Dependent
     margin-top: -10px;
     padding-bottom: 10px;
+
+    label{
+        font-family: $bodyFontFamily;
+        font-weight: $fontWeight;
+    }
+}
+
+.help-block-2{
+    // margin-top: -10px;
+    // padding-bottom: 10px;
 
     label{
         font-family: $bodyFontFamily;
@@ -123,9 +134,7 @@ input.ng-invalid.ng-touched{
 
 .btn-default {
     // text-align: right;
-    float: right;
-    // position: absolute;
-    // width: 100%;
+    float: right; //MOVE GODDAMMIT
 
     // &:active {
     //     transform: translateX(4px);
