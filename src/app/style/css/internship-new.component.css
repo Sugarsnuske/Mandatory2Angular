@@ -28,7 +28,7 @@ h1 {
   text-align: center;
   margin-bottom: 4%;
   text-decoration: none;
-  text-shadow: 2px 2px 5px black; }
+  text-shadow: 2px 2px 5px grey; }
 
 button, input, label {
   font-family: "Lato", sans-serif;
@@ -100,11 +100,8 @@ input.ng-invalid.ng-touched {
   text-align: center;
   margin-bottom: 4%; }
 
-.btn-primary:active {
-  transform: translateY(4px); }
-
-.btn-default:active {
-  transform: translateX(4px); }
+.btn-default {
+  float: right; }
 
 .btn-primary span {
   cursor: pointer;

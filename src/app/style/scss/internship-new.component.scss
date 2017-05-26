@@ -31,7 +31,7 @@ h1{
     text-align: center;
     margin-bottom: 4%;
     text-decoration: none;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px grey;
 }
 
 button, input, label{
@@ -121,13 +121,15 @@ input.ng-invalid.ng-touched{
     margin-bottom: 4%;
 }
 
-//Small transformations for "Suggest Teacher" and "Suggest All" buttons
-.btn-primary:active{
-    transform: translateY(4px);
-}
+.btn-default {
+    // text-align: right;
+    float: right;
+    // position: absolute;
+    // width: 100%;
 
-.btn-default:active{
-    transform: translateX(4px);
+    // &:active {
+    //     transform: translateX(4px);
+    // }
 }
 
 //Transition and transformation for "Internship Repport" button
