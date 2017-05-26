@@ -58,20 +58,13 @@ label{
     font-weight: $fontWeight;
 }
 
-input {
-    width: 100px;
-}
-
 /*Divs - Containers*/
 .flex-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 5px 5px;
     padding: 5px 5px; 
-}
-
-.flex-item{
-    width: 25%;   
 }
 
 //When input is 'invalid' and also 'touched', do this..

@@ -14,7 +14,7 @@ body {
   body h3 {
     font-size: 12px; }
   body p, body label, body a, body input[type=text], body input[type=date], body .textarea {
-    font-size: 10px; }
+    font-size: 12px; }
   body svg {
     width: 100px;
     height: 50px; }
@@ -29,7 +29,9 @@ body {
   body .modal-content {
     width: 80%; }
   body .help-block {
-    padding-left: 330px; } }
+    padding-left: 330px; }
+  body .flex-item {
+    width: 240px; } }
 /* iPads */
 @media only screen and (min-width: 768px) {
   body h1 {
@@ -54,7 +56,9 @@ body {
   body .modal-content {
     width: 90%; }
   body .help-block {
-    padding-left: 430px; } }
+    padding-left: 430px; }
+  body .flex-item {
+    width: 250px; } }
 /* Desktops and laptops */
 @media only screen and (min-width: 1224px) {
   body h1 {
@@ -81,6 +85,8 @@ body {
   body .modal-content {
     width: 100%; }
   body .help-block {
-    padding-left: 530px; } }
+    padding-left: 530px; }
+  body .flex-item {
+    width: 280px; } }
 
 /*# sourceMappingURL=styles.css.map */

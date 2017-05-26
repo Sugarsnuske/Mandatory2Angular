@@ -8,9 +8,6 @@ body{
 }
 
 /*Media Queries*/
-
-//Make a (max-width : 320px) {}
-
 /* Smartphones */
 @media only screen and (min-width : 320px) {
     body {
@@ -25,7 +22,7 @@ body{
             font-size: 12px;
         }
         p, label, a, input[type=text], input[type=date], .textarea {
-            font-size: 10px;
+            font-size: 12px;
         }
         svg {
             width: 100px;
@@ -47,6 +44,9 @@ body{
         }
         .help-block{
             padding-left: 330px;
+        }
+        .flex-item { //new-internship
+            width: 240px;
         }
     }
 }
@@ -87,6 +87,9 @@ body{
         }
         .help-block{
             padding-left: 430px;
+        }
+        .flex-item { //new-internship
+            width: 250px;
         }
     }
 }
@@ -130,6 +133,9 @@ body{
         }
         .help-block{
             padding-left: 530px;
+        }
+        .flex-item { //new-internship
+            width: 280px;
         }
     }
 }
