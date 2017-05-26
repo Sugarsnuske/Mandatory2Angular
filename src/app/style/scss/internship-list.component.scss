@@ -17,6 +17,7 @@ h1 {
     text-align: center;
     font-family: $headerFontFamily;
     font-weight: $fontWeight;
+    text-shadow: 2px 2px 5px black;
 }
 
 h2 {
@@ -24,12 +25,13 @@ h2 {
     text-align: center;
     font-family: $bodyFontFamily;
     font-weight: $fontWeight;
+    text-shadow: 2px 2px 5px black;
 }
 
 #search-bar {
     float: right;
     padding: 8px 15px;
-    background:rgba(50, 50, 50, 0.2);
+    background:rgba(0, 0, 0, 0.2);
     border:0px solid #dbdbdb;
     border-radius: 20px;
     font-family: $bodyFontFamily;

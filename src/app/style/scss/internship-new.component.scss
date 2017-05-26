@@ -25,12 +25,13 @@ form{
 }
 
 h1{
-    color: $createh1Color;
+    color: $h1Color;
     font-family: $headerFontFamily;
     font-weight: $fontWeight;
     text-align: center;
     margin-bottom: 4%;
     text-decoration: none;
+    text-shadow: 2px 2px 5px black;
 }
 
 button, input, label{
