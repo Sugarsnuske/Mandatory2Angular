@@ -97,9 +97,6 @@ input.ng-invalid.ng-touched {
   text-align: center;
   margin-bottom: 4%; }
 
-.btn-default {
-  float: right; }
-
 .btn-primary span {
   cursor: pointer;
   display: inline-block;
