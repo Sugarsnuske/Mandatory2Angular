@@ -27,7 +27,8 @@ h1 {
   font-weight: 400;
   text-align: center;
   margin-bottom: 4%;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 2px 2px 5px grey; }
 
 button, input, label {
   font-family: "Lato", sans-serif;
@@ -54,9 +55,7 @@ input {
 
 /*Divs - Containers*/
 .flex-container {
-  display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
   justify-content: center;
   margin: 5px 5px;
   padding: 5px 5px; }
@@ -71,7 +70,7 @@ input.ng-invalid.ng-touched {
   background-repeat: no-repeat;
   background-position: right;
   background-color: white;
-  background-position-x: 230px; }
+  background-position-x: 98%; }
 
 .requiredValidator {
   color: #d8000c;
@@ -80,12 +79,15 @@ input.ng-invalid.ng-touched {
   font-weight: 400; }
 
 .help-block {
-  padding-left: 375px;
   margin-top: -10px;
   padding-bottom: 10px; }
   .help-block label {
     font-family: "Lato", sans-serif;
     font-weight: 400; }
+
+.help-block-2 label {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
 
 .required-star {
   color: #d8000c;
@@ -99,11 +101,8 @@ input.ng-invalid.ng-touched {
   text-align: center;
   margin-bottom: 4%; }
 
-.btn-primary:active {
-  transform: translateY(4px); }
-
-.btn-default:active {
-  transform: translateX(4px); }
+.btn-default {
+  float: right; }
 
 .btn-primary span {
   cursor: pointer;

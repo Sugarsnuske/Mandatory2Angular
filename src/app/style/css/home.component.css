@@ -1,19 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
 h1 {
   text-align: center;
-  margin: 5px 0px;
+  margin-top: 2.5%;
   padding: 7px 0px;
-  color: #000;
+  color: whitesmoke;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  text-shadow: 2px 2px 5px black; }
 
 h2 {
   text-align: center;
   margin: 5px 0px;
   padding: 7px 0px;
-  color: #676767;
+  color: lightgrey;
   font-family: "Lato", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  text-shadow: 2px 2px 5px black; }
 
 svg {
   transform: translate(25px, 25px);
@@ -33,7 +35,8 @@ The higher the number, the more space in between dashes in the stroke.*/
   overflow: hidden; }
 
 .photo-container img {
-  max-width: 100%; }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center; }
 
 .photo-overlay {
   color: #ffffff;
@@ -45,6 +48,7 @@ The higher the number, the more space in between dashes in the stroke.*/
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 400;
+  text-shadow: 2px 2px 5px black;
   display: flex;
   flex-direction: column;
   justify-content: center;

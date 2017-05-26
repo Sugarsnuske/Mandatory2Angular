@@ -1,8 +1,7 @@
 @import 'app/style/scss/vars.scss';
 
 body{
-    // background-image: url(http://delmaestrohomeinspection.com/DelMaestro_Inspections_-_201-873-8600/DelMaestro_Inspections_-_Contact_files/background.jpg);
-    // background-image: url(http://pantherpipeline.net/wp-content/themes/MaxiNews/images/background/blured-bg-5.png);
+    background-image: url(assets/_img/bg-kea-form.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,6 +42,9 @@ body{
         .modal-content {
             width: 80%;
         }
+        .help-block{
+            padding-left: 330px;
+        }
     }
 }
 
@@ -80,6 +82,9 @@ body{
         .modal-content {
             width: 90%;
         }
+        .help-block{
+            padding-left: 430px;
+        }
     }
 }
 
@@ -99,6 +104,9 @@ body{
         p, label, a, input[type=text], input[type=date], .textarea {
             font-size: 15px;
         }
+        #welcomeText {
+            font-size: 50px;
+        }
         svg {
             width: 200px;
             height: 75px;
@@ -116,6 +124,9 @@ body{
         }
         .modal-content {
             width: 100%;
+        }
+        .help-block{
+            padding-left: 530px;
         }
     }
 }

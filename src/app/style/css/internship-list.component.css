@@ -8,21 +8,23 @@ a {
     text-decoration: none; }
 
 h1 {
-  color: #000;
+  color: whitesmoke;
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  text-shadow: 2px 2px 5px black; }
 
 h2 {
-  color: #676767;
+  color: lightgrey;
   text-align: center;
   font-family: "Lato", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  text-shadow: 2px 2px 5px black; }
 
 #search-bar {
   float: right;
   padding: 8px 15px;
-  background: rgba(50, 50, 50, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   border: 0px solid #dbdbdb;
   border-radius: 20px;
   font-family: "Lato", sans-serif;
