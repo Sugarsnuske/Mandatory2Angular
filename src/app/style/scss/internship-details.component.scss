@@ -11,19 +11,10 @@
     margin: 20px;
 }
 
-// .headline-animation {
-//     overflow: hidden;
-    //border-right: .15em solid grey;
-    // white-space: nowrap;
-    // margin: 0 auto;
-    // animation: typing 3.5s steps(30, end), blink-caret 1s step-end infinite;
-// }
-
 label {
     color: $labelColor;
     font-weight: bold;
     font-family: $bodyFontFamily;
-    // font-size: $h3FontSize;
 }
 
 input[type=date] {
@@ -35,14 +26,3 @@ input[type=date] {
     font-family: $bodyFontFamily;
     font-weight: $fontWeight;
 }
-
-/*Keyframes*/
-
-// @keyframes typing {
-//     from {
-//         width: 0
-//     }
-//     to {
-//         width: 100%
-//     }
-// }

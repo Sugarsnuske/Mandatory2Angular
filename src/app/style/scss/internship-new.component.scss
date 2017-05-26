@@ -56,7 +56,6 @@ label{
     color: $labelColor;
     font-family: $bodyFontFamily;
     font-weight: $fontWeight;
-    // text-align: right;
 }
 
 input {
@@ -65,9 +64,7 @@ input {
 
 /*Divs - Containers*/
 .flex-container{
-    // display: -webkit-flex;
     display: flex;
-    // -webkit-justify-content: center;
     justify-content: center;
     margin: 5px 5px;
     padding: 5px 5px; 
@@ -94,23 +91,12 @@ input.ng-invalid.ng-touched{
     text-decoration: none;
     font-family: $bodyFontFamily;
     font-weight: $fontWeight;
-    // text-align: center;
 }
 
 .help-block{
-    // padding-left: 530px; //Media Query Dependent
+    // padding-left: 530px; //See Media Query
     margin-top: -10px;
     padding-bottom: 10px;
-
-    label{
-        font-family: $bodyFontFamily;
-        font-weight: $fontWeight;
-    }
-}
-
-.help-block-2{
-    // margin-top: -10px;
-    // padding-bottom: 10px;
 
     label{
         font-family: $bodyFontFamily;
@@ -133,12 +119,7 @@ input.ng-invalid.ng-touched{
 }
 
 .btn-default {
-    // text-align: right;
-    float: right; //MOVE GODDAMMIT
-
-    // &:active {
-    //     transform: translateX(4px);
-    // }
+    float: right; //Doesn't work
 }
 
 //Transition and transformation for "Internship Repport" button
