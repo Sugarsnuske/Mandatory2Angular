@@ -28,25 +28,34 @@ body{
             width: 100px;
             height: 50px;
         }
-        img{
+        img{ //Front-page
             width: 80%;
             height: 80%;
         }
-        .photo-overlay{
+        .photo-overlay{ //Front Page
             width: 80%;
             height: 60px;
         }
-        #search-bar {
+        #search-bar { //Internship-list
             width: 140px;
         }
-        .modal-content {
+        .modal-content { 
             width: 80%;
         }
-        .help-block{
-            padding-left: 330px;
-        }
-        .flex-item { //new-internship
+        // .help-block{
+        //     padding-left: 330px;
+        // }
+        .flex-item { //Internship-new
             width: 240px;
+        }
+        #suggest-btn { //Internship-new
+            padding-left: 40%;
+        }
+        .requiredValidator { //Internship-new 
+            padding-left: 25%;
+        }
+        #form-details { //Internship-details
+            padding-left: 30px;
         }
     }
 }
@@ -85,11 +94,20 @@ body{
         .modal-content {
             width: 90%;
         }
-        .help-block{
-            padding-left: 430px;
-        }
-        .flex-item { //new-internship
+        // .help-block{
+        //     padding-left: 430px;
+        // }
+        .flex-item { //Internship-new
             width: 250px;
+        }
+        #suggest-btn { //Internship-new
+            padding-left: 31%;
+        }
+        .requiredValidator { //Internship-new 
+            padding-left: 50%;
+        }
+        #form-details { //Internship-details
+            padding-left: 30px;
         }
     }
 }
@@ -131,11 +149,17 @@ body{
         .modal-content {
             width: 100%;
         }
-        .help-block{
-            padding-left: 530px;
-        }
-        .flex-item { //new-internship
+        .flex-item { //Internship-new
             width: 280px;
+        }
+        #suggest-btn { //Internship-new
+            padding-left: 28%;
+        }
+        .requiredValidator { //Internship-new 
+            padding-left: 50%;
+        }
+        #form-details { //Internship-details
+            padding-left: 30px;
         }
     }
 }

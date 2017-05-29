@@ -169,12 +169,12 @@
         </div>
 
         <!-- "Suggest Teacher" and "Suggest All" buttons -->
-        <div class="flex-container">
+        <div class="flex-container" id="suggest-btn">
           <!--<button class="btn btn-info flex-item" type="button" (click)="onSuggestTeacher()">Suggest Teacher</button>-->
           <button class="btn btn-default flex-item" type="button" (click)="onSuggestAll()">Suggest All</button>
         </div>
 
-        <div class="help-block-2" *ngIf="!internForm.valid && internForm.touched" >
+        <div class="help-block" *ngIf="!internForm.valid && internForm.touched" >
           <label class="required-star">* Please enter valid information:</label>
           <label *ngIf="!internForm.get('initials').valid && internForm.get('initials').touched">Initials</label>
           <label *ngIf="!internForm.get('name').valid && internForm.get('name').touched">Name of student</label>
