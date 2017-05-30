@@ -56,7 +56,7 @@ export class InternshipEditComponent implements OnInit {
     }
   }
 
-  /* Check if   */
+  /* Check if JSON-property is undefined */
   checkUndefined(state : any, index : number) {
     let check = this.intern;
     let placeholder = "this.intern.data." + state;

@@ -17,16 +17,6 @@ h2 {
   font-weight: 400;
   text-shadow: 2px 2px 5px black; }
 
-svg {
-  transform: translate(25px, 25px);
-  stroke-dasharray: 20;
-  animation: dash 10s linear  infinite; }
-
-/*Creating dashes in the stroke of SVG shapes. 
-The higher the number, the more space in between dashes in the stroke.*/
-@keyframes dash {
-  to {
-    stroke-dashoffset: 1000; } }
 .photo {
   text-align: center;
   margin-top: 3%;
@@ -36,7 +26,8 @@ The higher the number, the more space in between dashes in the stroke.*/
 
 .photo-container img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center; }
+  text-align: center;
+  border-radius: 5px; }
 
 .photo-overlay {
   color: #ffffff;

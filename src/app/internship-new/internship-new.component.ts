@@ -95,6 +95,7 @@ export class InternshipNewComponent implements OnInit {
     }, 3000);
   }
 
+  /* Used in Firebase */
   // private generateId() {
   //   const id = "5900933965daf6c0440b2d"
   //   return id + Math.round(Math.random() * 10000);

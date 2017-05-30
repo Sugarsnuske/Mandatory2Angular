@@ -34,41 +34,7 @@ export class InternshipListComponent implements OnInit {
 
   ngOnInit() {
     this.interns = this.internshipListService.internships
-    // this.internshipService.get()
-    //   .subscribe(
-    //     (interns: any[]) => {
-    //       this.internshipListService.internships = interns
-    //       this.interns = this.internshipListService.internships    
-    //       console.log(this.interns);  
-    //     }
-    //   );
   }
-
-  /* Check if any listItem is open and close if other one is open */
-  // checkOpen(el: any, state: string) {
-  //   switch (state) {
-  //     case "details": 
-  //       if (this.detailsOpen != el && this.detailsOpen != undefined){          
-  //         this.detailsOpen.update = false;
-  //         this.detailsOpen.details = "Details"
-  //         this.detailsOpen = el;
-  //       } else {
-  //         this.detailsOpen = el;
-  //       }
-  //       break;
-  //     case "delete":
-  //       if(this.internToDelete != el && this.internToDelete != undefined){
-  //         this.internToDelete.deletePressed = false;
-  //         this.internToDelete = el;
-  //       } else {
-  //         this.internToDelete = el;
-  //       }
-  //       break;
-  //     default:
-  //       break;
-  //   }
-      
-  // }
 
   /* Check if any listItem is open and close if other one is open */
   checkOpen(el: any, state: string) {

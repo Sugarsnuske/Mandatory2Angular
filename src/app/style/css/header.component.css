@@ -1,20 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
-.navbar {
+.collapse {
   background: none;
   border: none;
   float: right; }
-  .navbar a {
+  .collapse a {
     color: lightgrey;
     font-family: "Lato", sans-serif;
     font-weight: 400; }
-  .navbar a:hover {
+  .collapse a:hover {
     color: grey; }
-  .navbar .active-router {
+  .collapse .active-router {
     background-color: #5bc0de;
     border-radius: 2px; }
+  .collapse .navbar-collapse {
+    background: transparent; }
 
+.navbar {
+  border: none; }
+
+.navbar-header {
+  background-color: #364044; }
+  .navbar-header button {
+    color: lightgrey; }
+
+svg {
+  transform: translate(25px, 25px);
+  stroke-dasharray: 20;
+  animation: dash 10s linear  infinite; }
+
+/*Creating dashes in the stroke of SVG shapes. 
+The higher the number, the more space in between dashes in the stroke.*/
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000; } }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  .test {
-    width: 100%; } }
+  .navbarMQ {
+    width: 100%; }
+    .navbarMQ .showCollapse {
+      display: flex;
+      flex-direction: column; } }
 
 /*# sourceMappingURL=header.component.css.map */
