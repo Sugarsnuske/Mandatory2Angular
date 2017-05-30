@@ -1,10 +1,26 @@
-<div class="navbar navbar-default">
-    <ul class="nav navbar-nav">
-        <!-- RouterLink prevents request to the server. Internal search from app-module - appRoutes -->
-        <li><a routerLink="/" 
-            routerLinkActive="active-router"
-            [routerLinkActiveOptions]="{exact:true}">Home</a></li>
-        <li><a routerLink="internship-list" routerLinkActive="active-router">Internship List</a></li>
-        <li><a routerLink="internship-new" routerLinkActive="active-router">Create Intership Report</a></li>
-    </ul>
-</div>
+<div class="navbar-header pull-right"
+    [ngClass]="{'test': toggleState}" >
+    <button type="button" class="navbar-toggle"
+        (click)="toogleState()"
+        >asd
+        <!--data-toggle="collapse"-->
+        <!--data-target=".navbar-collapse"-->
+
+        <!--<span class="sr-only">Toggle navigation</span>-->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+        <div class="collapse navbar-collapse"
+        [ngClass]="{'in': toggleState}" >
+            <ul class="nav navbar-nav">
+            <!-- RouterLink prevents request to the server. Internal search from app-module - appRoutes -->
+            <li><a routerLink="/" 
+                routerLinkActive="active-router"
+                [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+            <li><a routerLink="internship-list" routerLinkActive="active-router">Internship List</a></li>
+            <li><a routerLink="internship-new" routerLinkActive="active-router">Create Intership Report</a></li>
+        </ul>
+    </div>    
+</div>    
+    

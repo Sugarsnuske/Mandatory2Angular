@@ -21,3 +21,15 @@
         border-radius: 2px;
     }
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    .test {
+        width: 100%;
+        // display: block;
+        // align-items: flex-end;
+        .in{
+            // padding-top: 10px;
+        }
+    }
+}
