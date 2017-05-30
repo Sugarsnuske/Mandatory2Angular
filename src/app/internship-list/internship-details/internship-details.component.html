@@ -1,9 +1,7 @@
 <div class="container">
-    <div class="headline"> 
-        <h2>Internship Report - {{ intern?.data?.name }}</h2> 
+    <div class="headline">
+        <h2>Internship Report - {{ intern?.data?.name }}</h2>
     </div>
-    <!--<div *ngIf="intern?.data?.initials"> {{ intern.data.initials }} </div>-->
-    <!--<br>-->
     <span>
         <button type="button" class="btn btn-danger" data-toggle="modal" 
             data-target="#deleteModal" (click)="onDelete()">Delete
@@ -34,7 +32,7 @@
                             <p>{{ intern?.data?.visitDate | date:'EEEE d MMMM y'}}</p>
                         </div>
                         <div class="form-group flex-container">
-                            <label for="companyName"class="flex-item">Company Name:</label>
+                            <label for="companyName" class="flex-item">Company Name:</label>
                             <p>{{ intern?.data?.companyName }}</p>
                         </div>
                         <div class="form-group flex-container">
@@ -49,12 +47,11 @@
         <!-- Trigger the editModal with a button -->
         <span><button type="button" id="see-more-button" class="btn btn-info" data-toggle="modal" 
             data-target="#editModal">See More</button></span>
-        <app-internship-edit [intern]="intern" (onInternUpdated)="internUpdated()" ></app-internship-edit>
+        <app-internship-edit [intern]="intern" (onInternUpdated)="internUpdated()"></app-internship-edit>
     </div>
 </div>
 
-<app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern" 
-    (onInternDeleted)="internDeleted()"></app-internship-delete>
+<app-internship-delete *ngIf="deletePressed" [internToBeDeleted]="intern" (onInternDeleted)="internDeleted()"></app-internship-delete>
 <div *ngIf="isDeleted" class="isDeleted">
     {{ intern?.data?.name }}'s Internship Report is now deleted!
 </div>
