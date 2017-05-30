@@ -16,7 +16,7 @@ input[type=date] {
   width: 40%; }
 
 .isDeleted {
-  color: #ffbaba;
+  color: #d9534f;
   font-family: "Lato", sans-serif;
   font-weight: 400; }
 
