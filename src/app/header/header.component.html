@@ -1,8 +1,10 @@
 <div class="navbar navbar-default">
     <ul class="nav navbar-nav">
         <!-- RouterLink prevents request to the server. Internal search from app-module - appRoutes -->
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="internship-list">Internship List</a></li>
-        <li><a routerLink="internship-new">Create Intership Report</a></li>
+        <li><a routerLink="/" 
+            routerLinkActive="active-router"
+            [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+        <li><a routerLink="internship-list" routerLinkActive="active-router">Internship List</a></li>
+        <li><a routerLink="internship-new" routerLinkActive="active-router">Create Intership Report</a></li>
     </ul>
 </div>

@@ -3,10 +3,21 @@
 
 .navbar {
     background: none;
-    border: none;
-    color: $mainFontColor;
+    border: none; 
     float: right;
 
-    font-family: $bodyFontFamily;
-    font-weight: $fontWeight;
+    a{
+        color: $mainFontColor;
+        font-family: $bodyFontFamily;
+        font-weight: $fontWeight;
+    }
+
+    a:hover{
+        color: grey;
+    }
+
+    .active-router{
+        background-color: $infoColor;
+        border-radius: 2px;
+    }
 }
