@@ -1,35 +1,57 @@
 @import 'vars.scss';
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 
-.navbar {
+.collapse {
     background: none;
     border: none; 
     float: right;
-
     a{
         color: $mainFontColor;
         font-family: $bodyFontFamily;
         font-weight: $fontWeight;
     }
-
     a:hover{
         color: grey;
     }
-
     .active-router{
         background-color: $infoColor;
         border-radius: 2px;
     }
+    .navbar-collapse{
+        background: transparent;
+    }
+}
+.navbar{
+    border: none;
+}
+.navbar-header {
+    background-color: $mainBgColor;
+    button{
+        color: $mainFontColor;
+    }
+}
+svg {
+    transform: translate(25px, 25px);
+
+    stroke-dasharray: 20;
+    animation: dash 10s linear  infinite;
 }
 
+/*Creating dashes in the stroke of SVG shapes. 
+The higher the number, the more space in between dashes in the stroke.*/
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
 
 @media only screen and (min-width: 320px) and (max-width: 767px){
-    .test {
+    .navbarMQ {
         width: 100%;
-        // display: block;
-        // align-items: flex-end;
-        .in{
-            // padding-top: 10px;
+
+        .showCollapse {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
