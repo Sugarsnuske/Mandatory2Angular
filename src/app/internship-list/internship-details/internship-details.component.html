@@ -4,11 +4,11 @@
     </div>
     <span>
         <button type="button" class="btn btn-danger" data-toggle="modal" 
-            data-target="#deleteModal" (click)="onDelete()">Delete
+            data-target="#deleteModal" (click)="onDelete()" role="button">Delete
         </button>
     </span>
     <span>
-        <button type="button" class="btn btn-info" (click)="onDetails()">{{ details }}</button>
+        <button type="button" class="btn btn-info" (click)="onDetails()" role="button">{{ details }}</button>
     </span>
 
     <div class="isUpdated" *ngIf="isUpdated">{{ intern?.data?.name }}'s Internship Report is now updated!</div>
@@ -17,27 +17,27 @@
         <!-- String interpolation -->
         <div id="form-details">
             <div class="row">
-                <form action="" method="post" name="registration" class="register form-horizontal">
+                <form action="" method="post" name="registration" class="register form-horizontal" role="form">
                     <div class="see-more">
                         <div class="form-group flex-container">
-                            <label for="initials" class="flex-item">Initials:</label>
-                            <p>{{ intern?.data?.initials }}</p>
+                            <label for="initials" class="flex-item" role="label">Initials:</label>
+                            <p role="paragraph">{{ intern?.data?.initials }}</p>
                         </div>
                         <div class="form-group flex-container">
-                            <label for="name" class="flex-item">Name:</label>
-                            <p>{{ intern?.data?.name }}</p>
+                            <label for="name" class="flex-item" role="label">Name:</label>
+                            <p role="paragraph">{{ intern?.data?.name }}</p>
                         </div>
                         <div class="form-group flex-container">
-                            <label for="visitDate" class="flex-item">Visit Date:</label>
-                            <p>{{ intern?.data?.visitDate | date:'EEEE d MMMM y'}}</p>
+                            <label for="visitDate" class="flex-item" role="label">Visit Date:</label>
+                            <p role="paragraph">{{ intern?.data?.visitDate | date:'EEEE d MMMM y'}}</p>
                         </div>
                         <div class="form-group flex-container">
-                            <label for="companyName" class="flex-item">Company Name:</label>
-                            <p>{{ intern?.data?.companyName }}</p>
+                            <label for="companyName" class="flex-item" role="label">Company Name:</label>
+                            <p role="paragraph">{{ intern?.data?.companyName }}</p>
                         </div>
                         <div class="form-group flex-container">
-                            <label for="Company Person" class="flex-item">Company Contact Person:</label>
-                            <p>{{ intern?.data?.companyPerson }}</p>
+                            <label for="Company Person" class="flex-item" role="label">Company Contact Person:</label>
+                            <p role="paragraph">{{ intern?.data?.companyPerson }}</p>
                         </div>
                     </div>
                 </form>
@@ -46,7 +46,7 @@
 
         <!-- Trigger the editModal with a button -->
         <span><button type="button" id="see-more-button" class="btn btn-info" data-toggle="modal" 
-            data-target="#editModal">See More</button></span>
+            data-target="#editModal" role="button">See More</button></span>
         <app-internship-edit [intern]="intern" (onInternUpdated)="internUpdated()"></app-internship-edit>
     </div>
 </div>

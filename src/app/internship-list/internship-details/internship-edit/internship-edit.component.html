@@ -5,71 +5,71 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Edit Internship Report for {{ intern?.data?.name }}</h3>
+                <button type="button" class="close" data-dismiss="modal" role="button">&times;</button>
+                <h3 class="modal-title" role="header" role="header">Edit Internship Report for {{ intern?.data?.name }}</h3>
             </div>
             <div class="modal-body">
-                <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm">
+                <form (ngSubmit)="onSubmitInternshipForm()" #f="ngForm" role="form">
 
                     <div class="form-group">
-                        <label for="initials">Initials</label>
-                        <input type="text" name="initials" class="form-control" [(ngModel)]="internshipToBeUpdated[0]">
+                        <label for="initials" role="label">Initials</label>
+                        <input type="text" name="initials" class="form-control" [(ngModel)]="internshipToBeUpdated[0]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="name">Student Name</label>
-                        <input type="text" name="name" class="form-control" [(ngModel)]="internshipToBeUpdated[1]">
+                        <label for="name" role="label">Student Name</label>
+                        <input type="text" name="name" class="form-control" [(ngModel)]="internshipToBeUpdated[1]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="visitDate">Visit Date</label>
-                        <input type="date" name="visitDate" class="form-control" [(ngModel)]="internshipToBeUpdated[2]">
+                        <label for="visitDate" role="label">Visit Date</label>
+                        <input type="date" name="visitDate" class="form-control" [(ngModel)]="internshipToBeUpdated[2]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="IDOfInterhship">ID of Internship</label>
-                        <input type="text" name="IDOfInternship" class="form-control" [(ngModel)]="internshipToBeUpdated[3]">
+                        <label for="IDOfInterhship" role="label">ID of Internship</label>
+                        <input type="text" name="IDOfInternship" class="form-control" [(ngModel)]="internshipToBeUpdated[3]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="companyName">Company Name</label>
-                        <input type="text" name="companyName" class="form-control" [(ngModel)]="internshipToBeUpdated[4]">
+                        <label for="companyName" role="label">Company Name</label>
+                        <input type="text" name="companyName" class="form-control" [(ngModel)]="internshipToBeUpdated[4]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="companyPerson">Company Contact Person</label>
-                        <input type="text" name="companyPerson" class="form-control" [(ngModel)]="internshipToBeUpdated[5]">
+                        <label for="companyPerson" role="label">Company Contact Person</label>
+                        <input type="text" name="companyPerson" class="form-control" [(ngModel)]="internshipToBeUpdated[5]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="companyTrends">Company Trends</label>
-                        <input type="text" name="companyTrends" class="form-control" [(ngModel)]="internshipToBeUpdated[6]">
+                        <label for="companyTrends" role="label">Company Trends</label>
+                        <input type="text" name="companyTrends" class="form-control" [(ngModel)]="internshipToBeUpdated[6]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="companyQualification">Company Qualification</label>
-                        <input type="text" name="companyQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[7]">
+                        <label for="companyQualification" role="label">Company Qualification</label>
+                        <input type="text" name="companyQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[7]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="studentQualification">Student Qualification</label>
-                        <input type="text" name="studentQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[8]">
+                        <label for="studentQualification" role="label">Student Qualification</label>
+                        <input type="text" name="studentQualification" class="form-control" [(ngModel)]="internshipToBeUpdated[8]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="cooperation">Cooperation</label>
-                        <input type="text" name="cooperation" class="form-control" [(ngModel)]="internshipToBeUpdated[9]">
+                        <label for="cooperation" role="label">Cooperation</label>
+                        <input type="text" name="cooperation" class="form-control" [(ngModel)]="internshipToBeUpdated[9]" role="input">
                     </div>
 
                     <div class="form-group">
-                        <label for="miscellaneous">Miscellaneous</label>
-                        <textarea rows="5" name="miscellaneous" class="form-control textarea" [(ngModel)]="internshipToBeUpdated[10]"></textarea>
+                        <label for="miscellaneous" role="label">Miscellaneous</label>
+                        <textarea rows="5" name="miscellaneous" class="form-control textarea" [(ngModel)]="internshipToBeUpdated[10]" role="textarea"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <span><button type="button" class="btn btn-success" data-dismiss="modal" (click)="onUpdate()">Save</button></span>
+                <button type="button" class="btn btn-default" data-dismiss="modal" role="burron">Close</button>
+                <span><button type="button" class="btn btn-success" data-dismiss="modal" (click)="onUpdate()" role="button">Save</button></span>
             </div>
         </div>
     </div>
